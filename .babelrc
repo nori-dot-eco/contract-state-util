@@ -1,0 +1,64 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": "last 2 versions, > 5%"
+        }
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": ["transform-class-properties"],
+  "env": {
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": "last 2 versions, > 5%"
+            },
+            "modules": false
+          }
+        ],
+        "stage-0"
+      ]
+    },
+    "test": {
+      "plugins": ["transform-class-properties"],
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    },
+    "server": {
+      "plugins": [
+        "dynamic-import-node",
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "displayName": false
+          }
+        ]
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    }
+  }
+}
