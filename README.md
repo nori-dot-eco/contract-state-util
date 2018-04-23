@@ -7,6 +7,10 @@ Contract Name: ContractName
 Name: varName | Type: varType | Value: varValue
 ```
 
+Most of the logic is in `lib/contracts.js`.
+
+It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, arrays, or mappings`.
+
 ## Install
 
 `yarn install`
