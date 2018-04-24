@@ -8,114 +8,53 @@ import Table, {
   TableRow,
 } from 'material-ui/Table';
 import { Card, CardContent, Typography } from 'material-ui';
-import {
-  compose,
-  lifecycle,
-  mapProps,
-  shouldUpdate,
-  shallowEqual,
-} from 'recompose';
-import { Wallet } from '../lib/contracts';
+import { compose, lifecycle } from 'recompose';
 
-const styles = theme => ({
+const styles = () => ({
   root: {
-    width: '100%',
+    width: '500px !important',
   },
   table: {
-    maxWidth: 400,
+    maxWidth: '400px',
   },
 });
 
-const SimpleTableUI = withStyles(styles)(({ contractStates, classes }) => {
-  console.debug('render ui');
-  return (
-    <div className={classes.root}>
-      {contractStates &&
-        contractStates.map(n => (
-          <Card>
-            <CardContent>
-              <Table className={classes.table}>
-                <TableHead>
-                  <Typography variant="title">{n.contractName}</Typography>
-                  <TableRow>
-                    <TableCell>Name</TableCell>
-                    <TableCell>Type</TableCell>
-                    <TableCell>Value</TableCell>
+const SimpleTableUI = ({ contractStates, classes }) => (
+  <div className={classes.table}>
+    {contractStates &&
+      contractStates.map(n => (
+        <Card className={classes.table}>
+          <CardContent>
+            <Table className={classes.table}>
+              <TableHead>
+                <Typography variant="title">
+                  Contract Name: {n.contractName}
+                </Typography>
+                <TableRow>
+                  <TableCell>State Name</TableCell>
+                  <TableCell>Type</TableCell>
+                  <TableCell>Value</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {n.state.map(e => (
+                  <TableRow key={e.name}>
+                    <TableCell>{e.name}</TableCell>
+                    <TableCell>{e.type}</TableCell>
+                    <TableCell>{e.value.toString()}</TableCell>
                   </TableRow>
-                </TableHead>
-                <TableBody>
-                  {n.state.map(e => (
-                    <TableRow key={e.name}>
-                      <TableCell>{e.name}</TableCell>
-                      <TableCell numeric>{e.type}</TableCell>
-                      <TableCell numeric>{e.value.toString()}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-        ))}
-    </div>
-  );
-});
+                ))}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      ))}
+  </div>
+);
 
 SimpleTableUI.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-
-// function shallowEqual(objA, objB) {
-//   // console.log('entering hte shallow equal');
-//   if (objA === objB) {
-//     console.log(objA, objB);
-//     return true;
-//   }
-
-//   if (
-//     typeof objA !== 'object' ||
-//     objA === null ||
-//     typeof objB !== 'object' ||
-//     objB === null
-//   ) {
-//     console.log(
-//       typeof objA !== 'object',
-//       objA === null,
-//       typeof objB !== 'object',
-//       objB === null,
-//       objA,
-//       objB
-//     );
-//     return false;
-//   }
-
-//   const keysA = Object.keys(objA);
-//   const keysB = Object.keys(objB);
-
-//   if (keysA.length !== keysB.length) {
-//     console.log(keysA.length, keysB.length);
-//     return false;
-//   }
-
-//   // Test for A's keys different from B.
-//   const bHasOwnProperty = hasOwnProperty.bind(objB);
-//   for (let i = 0; i < keysA.length; i++) {
-//     if (!bHasOwnProperty(keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) {
-//       // console.log(
-//       //   'returning false i guess',
-//       //   bHasOwnProperty(keysA[i]),
-//       //   objA[keysA[i]],
-//       //   objB[keysA[i]]
-//       // );
-//       return false;
-//     }
-//   }
-//   console.log('returning true i guess');
-//   return true;
-// }
-
-// function shallowCompare(instance, nextProps) {
-//   return shallowEqual(instance, nextProps);
-// }
 
 const SimpleTable = compose(
   lifecycle({
@@ -124,10 +63,9 @@ const SimpleTable = compose(
       this.setState({
         contractStates,
       });
-
-      this.forceUpdate();
     },
-  })
+  }),
+  withStyles(styles)
 )(SimpleTableUI);
 SimpleTable.propTypes = {
   classes: PropTypes.object.isRequired,

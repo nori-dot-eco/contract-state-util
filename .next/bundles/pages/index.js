@@ -18,77 +18,6 @@ module.exports = {"contractName":"States","abi":[{"constant":true,"inputs":[],"n
 
 /***/ }),
 
-/***/ "./index.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _contracts = __webpack_require__("./lib/contracts.js");
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-var state = [];
-
-var getState = function getState() {
-  var contractStates = _contracts.Wallet.getContractState();
-  console.log(contractStates);
-  // contractStates.map(c => {
-  //   console.log('c', { c });
-  // });
-
-  // for (const { contractName: c, state: s } of contractStates) {
-  //   console.log('Contract Name: ', c);
-  //   for (let i = 0; i < s.length; i++) {
-  //     console.log(
-  //       'Name:',
-  //       s[i].name,
-  //       '| Type:',
-  //       s[i].type,
-  //       '| Value:',
-  //       await s[i].value
-  //     );
-  //   }
-  //   console.log('----');
-  // }
-  // await contractStates;
-  return _contracts.Wallet.getContractState();
-};
-
-var _default = getState;
-exports.default = _default;
-// getState();
-
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(state, 'state', '/home/ubuntu/dev/contract-state-util/index.js');
-  reactHotLoader.register(getState, 'getState', '/home/ubuntu/dev/contract-state-util/index.js');
-  reactHotLoader.register(_default, 'default', '/home/ubuntu/dev/contract-state-util/index.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
-
-/***/ }),
-
 /***/ "./lib/contracts.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -181,8 +110,6 @@ var _web = __webpack_require__("./lib/web3.js");
 var _truffle = __webpack_require__("./truffle.js");
 
 var _truffle2 = _interopRequireDefault(_truffle);
-
-var _es6Promisify = __webpack_require__("./node_modules/es6-promisify/dist/promisify.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -421,9 +348,6 @@ var Wallet = exports.Wallet = function () {
 
                     _context8.prev = 1;
                     stateValue = _this2.contractFunc(_contract.contractName + '.' + abi.name)();
-                    // const b = await stateValue;
-                    // console.log('tryna log sv', b);
-
                     _context8.t0 = stateNamesAndVals;
                     _context8.t1 = abi.name;
                     _context8.t2 = abi.outputs[0].type;
@@ -460,9 +384,7 @@ var Wallet = exports.Wallet = function () {
           return function (_x5) {
             return _ref8.apply(this, arguments);
           };
-        }()
-        // return stateNamesAndVals;
-        );
+        }());
         contractStates.push(Object.create({
           contractName: _contract.contractName,
           state: stateNamesAndVals
@@ -491,13 +413,6 @@ Wallet.contractFunc = function (contractDotFunc) {
           switch (_context9.prev = _context9.next) {
             case 0:
               _contractDotFunc$spli = contractDotFunc.split('.'), _contractDotFunc$spli2 = _slicedToArray(_contractDotFunc$spli, 2), contractName = _contractDotFunc$spli2[0], funcName = _contractDotFunc$spli2[1];
-              // if (args){
-              //   const [Contract, cid] = await Promise.all([
-              //     Wallet.getContract(contractName)
-              //   ]);
-
-              // }
-
               _context9.next = 3;
               return Wallet.getContract(contractName);
 
@@ -19086,97 +19001,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var size = void 0;
 
 module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/es6-promisify/dist/promisify.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-// Symbols is a better way to do this, but if we don't have support we'll just
-// have to make do with an unlikely token
-var customArgumentsToken = Symbol ? Symbol("__ES6-PROMISIFY--CUSTOM-ARGUMENTS__") : "__ES6-PROMISIFY--CUSTOM-ARGUMENTS__";
-
-/**
- * promisify()
- * Transforms callback-based function -- func(arg1, arg2 .. argN, callback) -- into
- * an ES6-compatible Promise. Promisify provides a default callback of the form (error, result)
- * and rejects when `error` is truthy.
- *
- * @param {function} original - The function to promisify
- * @return {function} A promisified version of `original`
- */
-function promisify(original) {
-
-    // Ensure the argument is a function
-    if (typeof original !== "function") {
-        throw new TypeError("Argument to promisify must be a function");
-    }
-
-    // If the user has asked us to decode argument names for them, honour that
-    var argumentNames = original[customArgumentsToken];
-
-    // If the user has supplied a custom Promise implementation, use it. Otherwise
-    // fall back to whatever we can find on the global object.
-    var ES6Promise = promisify.Promise || Promise;
-
-    // If we can find no Promise implemention, then fail now.
-    if (typeof ES6Promise !== "function") {
-        throw new Error("No Promise implementation found; do you need a polyfill?");
-    }
-
-    return function () {
-        var _this = this;
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return new ES6Promise(function (resolve, reject) {
-
-            // Append the callback bound to the context
-            args.push(function callback(err) {
-
-                if (err) {
-                    return reject(err);
-                }
-
-                for (var _len2 = arguments.length, values = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-                    values[_key2 - 1] = arguments[_key2];
-                }
-
-                if (values.length === 1 || !argumentNames) {
-                    return resolve(values[0]);
-                }
-
-                var o = {};
-                values.forEach(function (value, index) {
-                    var name = argumentNames[index];
-                    if (name) {
-                        o[name] = value;
-                    }
-                });
-
-                resolve(o);
-            });
-
-            // Call the function.
-            original.call.apply(original, [_this].concat(args));
-        });
-    };
-}
-
-// Attach this symbol to the exported function, so users can use it
-promisify.argumentNames = customArgumentsToken;
-promisify.Promise = undefined;
-
-// Export the public API
-exports.promisify = promisify;
 
 /***/ }),
 
@@ -76224,8 +76048,6 @@ var _materialUi = __webpack_require__("./node_modules/material-ui/index.es.js");
 
 var _recompose = __webpack_require__("./node_modules/recompose/dist/Recompose.esm.js");
 
-var _contracts = __webpack_require__("./lib/contracts.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
@@ -76234,36 +76056,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   enterModule && enterModule(module);
 })();
 
-var styles = function styles(theme) {
+var styles = function styles() {
   return {
     root: {
-      width: '100%'
+      width: '500px !important'
     },
     table: {
-      maxWidth: 400
+      maxWidth: '400px'
     }
   };
 };
 
-var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
+var SimpleTableUI = function SimpleTableUI(_ref) {
   var contractStates = _ref.contractStates,
       classes = _ref.classes;
-
-  console.debug('render ui');
   return _react2.default.createElement(
     'div',
-    { className: classes.root, __source: {
+    { className: classes.table, __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 23
       }
     },
     contractStates && contractStates.map(function (n) {
       return _react2.default.createElement(
         _materialUi.Card,
-        {
-          __source: {
+        { className: classes.table, __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 26
           }
         },
         _react2.default.createElement(
@@ -76271,14 +76090,14 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 27
             }
           },
           _react2.default.createElement(
             _Table2.default,
             { className: classes.table, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 37
+                lineNumber: 28
               }
             },
             _react2.default.createElement(
@@ -76286,16 +76105,17 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 38
+                  lineNumber: 29
                 }
               },
               _react2.default.createElement(
                 _materialUi.Typography,
                 { variant: 'title', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 39
+                    lineNumber: 30
                   }
                 },
+                'Contract Name: ',
                 n.contractName
               ),
               _react2.default.createElement(
@@ -76303,7 +76123,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 40
+                    lineNumber: 33
                   }
                 },
                 _react2.default.createElement(
@@ -76311,17 +76131,17 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 41
+                      lineNumber: 34
                     }
                   },
-                  'Name'
+                  'State Name'
                 ),
                 _react2.default.createElement(
                   _Table.TableCell,
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 42
+                      lineNumber: 35
                     }
                   },
                   'Type'
@@ -76331,7 +76151,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 43
+                      lineNumber: 36
                     }
                   },
                   'Value'
@@ -76343,7 +76163,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 46
+                  lineNumber: 39
                 }
               },
               n.state.map(function (e) {
@@ -76351,7 +76171,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   _Table.TableRow,
                   { key: e.name, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 48
+                      lineNumber: 41
                     }
                   },
                   _react2.default.createElement(
@@ -76359,25 +76179,27 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 49
+                        lineNumber: 42
                       }
                     },
                     e.name
                   ),
                   _react2.default.createElement(
                     _Table.TableCell,
-                    { numeric: true, __source: {
+                    {
+                      __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 50
+                        lineNumber: 43
                       }
                     },
                     e.type
                   ),
                   _react2.default.createElement(
                     _Table.TableCell,
-                    { numeric: true, __source: {
+                    {
+                      __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 51
+                        lineNumber: 44
                       }
                     },
                     e.value.toString()
@@ -76390,64 +76212,11 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
       );
     })
   );
-});
+};
 
 SimpleTableUI.propTypes = {
   classes: _propTypes2.default.object.isRequired
 };
-
-// function shallowEqual(objA, objB) {
-//   // console.log('entering hte shallow equal');
-//   if (objA === objB) {
-//     console.log(objA, objB);
-//     return true;
-//   }
-
-//   if (
-//     typeof objA !== 'object' ||
-//     objA === null ||
-//     typeof objB !== 'object' ||
-//     objB === null
-//   ) {
-//     console.log(
-//       typeof objA !== 'object',
-//       objA === null,
-//       typeof objB !== 'object',
-//       objB === null,
-//       objA,
-//       objB
-//     );
-//     return false;
-//   }
-
-//   const keysA = Object.keys(objA);
-//   const keysB = Object.keys(objB);
-
-//   if (keysA.length !== keysB.length) {
-//     console.log(keysA.length, keysB.length);
-//     return false;
-//   }
-
-//   // Test for A's keys different from B.
-//   const bHasOwnProperty = hasOwnProperty.bind(objB);
-//   for (let i = 0; i < keysA.length; i++) {
-//     if (!bHasOwnProperty(keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) {
-//       // console.log(
-//       //   'returning false i guess',
-//       //   bHasOwnProperty(keysA[i]),
-//       //   objA[keysA[i]],
-//       //   objB[keysA[i]]
-//       // );
-//       return false;
-//     }
-//   }
-//   console.log('returning true i guess');
-//   return true;
-// }
-
-// function shallowCompare(instance, nextProps) {
-//   return shallowEqual(instance, nextProps);
-// }
 
 var SimpleTable = (0, _recompose.compose)((0, _recompose.lifecycle)({
   componentWillReceiveProps: function componentWillReceiveProps() {
@@ -76456,10 +76225,8 @@ var SimpleTable = (0, _recompose.compose)((0, _recompose.lifecycle)({
     this.setState({
       contractStates: contractStates
     });
-
-    this.forceUpdate();
   }
-}))(SimpleTableUI);
+}), (0, _styles.withStyles)(styles))(SimpleTableUI);
 SimpleTable.propTypes = {
   classes: _propTypes2.default.object.isRequired
 };
@@ -76532,10 +76299,6 @@ var _propTypes = __webpack_require__("./node_modules/next/node_modules/prop-type
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _index = __webpack_require__("./index.js");
-
-var _index2 = _interopRequireDefault(_index);
-
 var _contracts = __webpack_require__("./lib/contracts.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -76566,22 +76329,11 @@ var App = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      contractStates: null
-    }, _this.updateBlockchainState = function () {
-      // const contractState = Wallet.getContractState();
-      // this.setState({});
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.updateBlockchainState = function () {
       console.debug('updating blockchain');
-      // const contractState = Wallet.getContractState();
-      // this.setState({
-      //   contractStates: contractState,
-      // });
-
       clearTimeout(_this.updateTimeout);
-
       _this.forceUpdate();
       _this.updateTimeout = setTimeout(_this.updateBlockchainState, 3000);
-
       console.debug('done updating blockchain');
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -76589,35 +76341,21 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      var contractState = _contracts.Wallet.getContractState();
-      this.setState({
-        contractStates: contractState
-      });
       this.updateBlockchainState();
-      console.debug('mounted');
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      console.debug('unmount');
       clearTimeout(this.updateTimeout);
     }
-    // componentDidUpdate() {
-    //   this.setState({
-    //     contractStates: Wallet.getContractState(),
-    //   });
-    //   // this.forceUpdate();
-    // }
-
   }, {
     key: 'render',
     value: function render() {
-      console.log('in index render');
       return _react2.default.createElement(
         'div',
-        { className: 'App', __source: {
+        { className: 'App', style: { width: '100%' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 25
           }
         },
         _react2.default.createElement(
@@ -76625,21 +76363,21 @@ var App = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 52
+              lineNumber: 26
             }
           },
           _react2.default.createElement(
             'header',
             { className: 'App-header', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 53
+                lineNumber: 27
               }
             },
             _react2.default.createElement(
               'h1',
               { className: 'App-title', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 54
+                  lineNumber: 28
                 }
               },
               'Contract States'
@@ -76651,12 +76389,12 @@ var App = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 31
             }
           },
           _react2.default.createElement(_SimpleTable2.default, { contractStates: _contracts.Wallet.getContractState(), __source: {
               fileName: _jsxFileName,
-              lineNumber: 58
+              lineNumber: 32
             }
           })
         )
