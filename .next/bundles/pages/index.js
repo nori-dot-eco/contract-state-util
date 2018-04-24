@@ -7,14 +7,14 @@ module.exports =
 /***/ "./build/contracts/MoreStates.json":
 /***/ (function(module, exports) {
 
-module.exports = {"contractName":"MoreStates","abi":[{"constant":true,"inputs":[],"name":"_bool2","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_uint2","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_string2","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}],"bytecode":"0x606060405260016000556040805190810160405280600781526020017f737472696e67320000000000000000000000000000000000000000000000000081525060019080519060200190610054929190610080565b506000600260006101000a81548160ff021916908315150217905550341561007b57600080fd5b610125565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100c157805160ff19168380011785556100ef565b828001600101855582156100ef579182015b828111156100ee5782518255916020019190600101906100d3565b5b5090506100fc9190610100565b5090565b61012291905b8082111561011e576000816000905550600101610106565b5090565b90565b610223806101346000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a2e7fe8a1461005c578063b6e6f25514610089578063c23ca580146100b2575b600080fd5b341561006757600080fd5b61006f610140565b604051808215151515815260200191505060405180910390f35b341561009457600080fd5b61009c610153565b6040518082815260200191505060405180910390f35b34156100bd57600080fd5b6100c5610159565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101055780820151818401526020810190506100ea565b50505050905090810190601f1680156101325780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600260009054906101000a900460ff1681565b60005481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101ef5780601f106101c4576101008083540402835291602001916101ef565b820191906000526020600020905b8154815290600101906020018083116101d257829003601f168201915b5050505050815600a165627a7a723058204eadfee8b54f80c96a7344366f86cbf4ec1346f192077d21d296fb145833d4640029","deployedBytecode":"0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a2e7fe8a1461005c578063b6e6f25514610089578063c23ca580146100b2575b600080fd5b341561006757600080fd5b61006f610140565b604051808215151515815260200191505060405180910390f35b341561009457600080fd5b61009c610153565b6040518082815260200191505060405180910390f35b34156100bd57600080fd5b6100c5610159565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101055780820151818401526020810190506100ea565b50505050905090810190601f1680156101325780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600260009054906101000a900460ff1681565b60005481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101ef5780601f106101c4576101008083540402835291602001916101ef565b820191906000526020600020905b8154815290600101906020018083116101d257829003601f168201915b5050505050815600a165627a7a723058204eadfee8b54f80c96a7344366f86cbf4ec1346f192077d21d296fb145833d4640029","sourceMap":"26:123:1:-;;;73:1;52:22;;80:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;141:5;120:26;;;;;;;;;;;;;;;;;;;;26:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"26:123:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;120:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;52:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;80:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;80:34:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;120:26;;;;;;;;;;;;;:::o;52:22::-;;;;:::o;80:34::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.20;\n\ncontract MoreStates {\n    uint public _uint2 = 1;\n    string public _string2 = \"string2\";\n    bool public _bool2 = false;\n}","sourcePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","ast":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","exportedSymbols":{"MoreStates":[68]},"id":69,"nodeType":"SourceUnit","nodes":[{"id":58,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:1"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":68,"linearizedBaseContracts":[68],"name":"MoreStates","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":61,"name":"_uint2","nodeType":"VariableDeclaration","scope":68,"src":"52:22:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":59,"name":"uint","nodeType":"ElementaryTypeName","src":"52:4:1","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"31","id":60,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"73:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":64,"name":"_string2","nodeType":"VariableDeclaration","scope":68,"src":"80:34:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":62,"name":"string","nodeType":"ElementaryTypeName","src":"80:6:1","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e6732","id":63,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"105:9:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_799a81827817efd4e794a71804dd55521cf5563c764ff06e7c5bb2c2ac2b2596","typeString":"literal_string \"string2\""},"value":"string2"},"visibility":"public"},{"constant":false,"id":67,"name":"_bool2","nodeType":"VariableDeclaration","scope":68,"src":"120:26:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":65,"name":"bool","nodeType":"ElementaryTypeName","src":"120:4:1","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"66616c7365","id":66,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"141:5:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"false"},"visibility":"public"}],"scope":69,"src":"26:123:1"}],"src":"0:149:1"},"legacyAST":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","exportedSymbols":{"MoreStates":[68]},"id":69,"nodeType":"SourceUnit","nodes":[{"id":58,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:1"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":68,"linearizedBaseContracts":[68],"name":"MoreStates","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":61,"name":"_uint2","nodeType":"VariableDeclaration","scope":68,"src":"52:22:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":59,"name":"uint","nodeType":"ElementaryTypeName","src":"52:4:1","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"31","id":60,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"73:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":64,"name":"_string2","nodeType":"VariableDeclaration","scope":68,"src":"80:34:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":62,"name":"string","nodeType":"ElementaryTypeName","src":"80:6:1","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e6732","id":63,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"105:9:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_799a81827817efd4e794a71804dd55521cf5563c764ff06e7c5bb2c2ac2b2596","typeString":"literal_string \"string2\""},"value":"string2"},"visibility":"public"},{"constant":false,"id":67,"name":"_bool2","nodeType":"VariableDeclaration","scope":68,"src":"120:26:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":65,"name":"bool","nodeType":"ElementaryTypeName","src":"120:4:1","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"66616c7365","id":66,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"141:5:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"false"},"visibility":"public"}],"scope":69,"src":"26:123:1"}],"src":"0:149:1"},"compiler":{"name":"solc","version":"0.4.21+commit.dfe3193c.Emscripten.clang"},"networks":{"4447":{"events":{},"links":{},"address":"0x2a504b5e7ec284aca5b6f49716611237239f0b97","transactionHash":"0x752e8d9df5be3f25c966420218bbd2721b7e5e906b44b129d71c51f36399a145"}},"schemaVersion":"2.0.0","updatedAt":"2018-04-23T21:30:52.106Z"}
+module.exports = {"contractName":"MoreStates","abi":[{"constant":true,"inputs":[],"name":"_int2","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_bool2","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_uint2","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_string2","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}],"bytecode":"0x60606040526001600055600180556040805190810160405280600781526020017f737472696e67320000000000000000000000000000000000000000000000000081525060029080519060200190610058929190610084565b506000600360006101000a81548160ff021916908315150217905550341561007f57600080fd5b610129565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100c557805160ff19168380011785556100f3565b828001600101855582156100f3579182015b828111156100f25782518255916020019190600101906100d7565b5b5090506101009190610104565b5090565b61012691905b8082111561012257600081600090555060010161010a565b5090565b90565b61025d806101386000396000f300606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806353e95af914610067578063a2e7fe8a14610090578063b6e6f255146100bd578063c23ca580146100e6575b600080fd5b341561007257600080fd5b61007a610174565b6040518082815260200191505060405180910390f35b341561009b57600080fd5b6100a361017a565b604051808215151515815260200191505060405180910390f35b34156100c857600080fd5b6100d061018d565b6040518082815260200191505060405180910390f35b34156100f157600080fd5b6100f9610193565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013957808201518184015260208101905061011e565b50505050905090810190601f1680156101665780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60005481565b600360009054906101000a900460ff1681565b60015481565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102295780601f106101fe57610100808354040283529160200191610229565b820191906000526020600020905b81548152906001019060200180831161020c57829003601f168201915b5050505050815600a165627a7a72305820d84786d6e9ea2a0cfd7a5659512146f871ca78129f13769fe005d0703cb4f44c0029","deployedBytecode":"0x606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806353e95af914610067578063a2e7fe8a14610090578063b6e6f255146100bd578063c23ca580146100e6575b600080fd5b341561007257600080fd5b61007a610174565b6040518082815260200191505060405180910390f35b341561009b57600080fd5b6100a361017a565b604051808215151515815260200191505060405180910390f35b34156100c857600080fd5b6100d061018d565b6040518082815260200191505060405180910390f35b34156100f157600080fd5b6100f9610193565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013957808201518184015260208101905061011e565b50505050905090810190601f1680156101665780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60005481565b600360009054906101000a900460ff1681565b60015481565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102295780601f106101fe57610100808354040283529160200191610229565b820191906000526020600020905b81548152906001019060200180831161020c57829003601f168201915b5050505050815600a165627a7a72305820d84786d6e9ea2a0cfd7a5659512146f871ca78129f13769fe005d0703cb4f44c0029","sourceMap":"26:149:1:-;;;71:1;52:20;;99:1;78:22;;106:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;167:5;146:26;;;;;;;;;;;;;;;;;;;;26:149;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"26:149:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;52:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;146:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;78:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;106:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;106:34:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;52:20;;;;:::o;146:26::-;;;;;;;;;;;;;:::o;78:22::-;;;;:::o;106:34::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.20;\n\ncontract MoreStates {\n    int public _int2 = 1;\n    uint public _uint2 = 1;\n    string public _string2 = \"string2\";\n    bool public _bool2 = false;\n}","sourcePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","ast":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","exportedSymbols":{"MoreStates":[71]},"id":72,"nodeType":"SourceUnit","nodes":[{"id":58,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:1"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":71,"linearizedBaseContracts":[71],"name":"MoreStates","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":61,"name":"_int2","nodeType":"VariableDeclaration","scope":71,"src":"52:20:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"},"typeName":{"id":59,"name":"int","nodeType":"ElementaryTypeName","src":"52:3:1","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"}},"value":{"argumentTypes":null,"hexValue":"31","id":60,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"71:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":64,"name":"_uint2","nodeType":"VariableDeclaration","scope":71,"src":"78:22:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":62,"name":"uint","nodeType":"ElementaryTypeName","src":"78:4:1","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"31","id":63,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"99:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":67,"name":"_string2","nodeType":"VariableDeclaration","scope":71,"src":"106:34:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":65,"name":"string","nodeType":"ElementaryTypeName","src":"106:6:1","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e6732","id":66,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"131:9:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_799a81827817efd4e794a71804dd55521cf5563c764ff06e7c5bb2c2ac2b2596","typeString":"literal_string \"string2\""},"value":"string2"},"visibility":"public"},{"constant":false,"id":70,"name":"_bool2","nodeType":"VariableDeclaration","scope":71,"src":"146:26:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":68,"name":"bool","nodeType":"ElementaryTypeName","src":"146:4:1","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"66616c7365","id":69,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"167:5:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"false"},"visibility":"public"}],"scope":72,"src":"26:149:1"}],"src":"0:175:1"},"legacyAST":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/MoreStates.sol","exportedSymbols":{"MoreStates":[71]},"id":72,"nodeType":"SourceUnit","nodes":[{"id":58,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:1"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":71,"linearizedBaseContracts":[71],"name":"MoreStates","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":61,"name":"_int2","nodeType":"VariableDeclaration","scope":71,"src":"52:20:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"},"typeName":{"id":59,"name":"int","nodeType":"ElementaryTypeName","src":"52:3:1","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"}},"value":{"argumentTypes":null,"hexValue":"31","id":60,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"71:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":64,"name":"_uint2","nodeType":"VariableDeclaration","scope":71,"src":"78:22:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":62,"name":"uint","nodeType":"ElementaryTypeName","src":"78:4:1","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"31","id":63,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"99:1:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"visibility":"public"},{"constant":false,"id":67,"name":"_string2","nodeType":"VariableDeclaration","scope":71,"src":"106:34:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":65,"name":"string","nodeType":"ElementaryTypeName","src":"106:6:1","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e6732","id":66,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"131:9:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_799a81827817efd4e794a71804dd55521cf5563c764ff06e7c5bb2c2ac2b2596","typeString":"literal_string \"string2\""},"value":"string2"},"visibility":"public"},{"constant":false,"id":70,"name":"_bool2","nodeType":"VariableDeclaration","scope":71,"src":"146:26:1","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":68,"name":"bool","nodeType":"ElementaryTypeName","src":"146:4:1","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"66616c7365","id":69,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"167:5:1","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"false"},"visibility":"public"}],"scope":72,"src":"26:149:1"}],"src":"0:175:1"},"compiler":{"name":"solc","version":"0.4.21+commit.dfe3193c.Emscripten.clang"},"networks":{"4447":{"events":{},"links":{},"address":"0xf25186b5081ff5ce73482ad761db0eb0d25abfbf","transactionHash":"0xc338f5aacc500ce9d3741f0c3c67d31f618822b17d6144217f62b0931c496c6d"}},"schemaVersion":"2.0.0","updatedAt":"2018-04-24T14:06:03.980Z"}
 
 /***/ }),
 
 /***/ "./build/contracts/States.json":
 /***/ (function(module, exports) {
 
-module.exports = {"contractName":"States","abi":[{"constant":true,"inputs":[],"name":"_uint","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_string","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_bool","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"}],"bytecode":"0x6060604052600080556040805190810160405280600681526020017f737472696e6700000000000000000000000000000000000000000000000000008152506001908051906020019061005392919061007f565b506001600260006101000a81548160ff021916908315150217905550341561007a57600080fd5b610124565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100c057805160ff19168380011785556100ee565b828001600101855582156100ee579182015b828111156100ed5782518255916020019190600101906100d2565b5b5090506100fb91906100ff565b5090565b61012191905b8082111561011d576000816000905550600101610105565b5090565b90565b610223806101336000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632543135b1461005c5780639b267f09146100855780639e6ba9c214610113575b600080fd5b341561006757600080fd5b61006f610140565b6040518082815260200191505060405180910390f35b341561009057600080fd5b610098610146565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d85780820151818401526020810190506100bd565b50505050905090810190601f1680156101055780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561011e57600080fd5b6101266101e4565b604051808215151515815260200191505060405180910390f35b60005481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101dc5780601f106101b1576101008083540402835291602001916101dc565b820191906000526020600020905b8154815290600101906020018083116101bf57829003601f168201915b505050505081565b600260009054906101000a900460ff16815600a165627a7a72305820468bb7a05ede3150cbb794c095c94d2d8b6e79cab35cf9a0c313a764afd7b2aa0029","deployedBytecode":"0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632543135b1461005c5780639b267f09146100855780639e6ba9c214610113575b600080fd5b341561006757600080fd5b61006f610140565b6040518082815260200191505060405180910390f35b341561009057600080fd5b610098610146565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d85780820151818401526020810190506100bd565b50505050905090810190601f1680156101055780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561011e57600080fd5b6101266101e4565b604051808215151515815260200191505060405180910390f35b60005481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101dc5780601f106101b1576101008083540402835291602001916101dc565b820191906000526020600020905b8154815290600101906020018083116101bf57829003601f168201915b505050505081565b600260009054906101000a900460ff16815600a165627a7a72305820468bb7a05ede3150cbb794c095c94d2d8b6e79cab35cf9a0c313a764afd7b2aa0029","sourceMap":"26:114:2:-;;;68:1;48:21;;75:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;133:4;113:24;;;;;;;;;;;;;;;;;;;;26:114;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"26:114:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;48:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;75:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;75:32:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;113:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;48:21;;;;:::o;75:32::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;113:24::-;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.20;\n\ncontract States {\n    uint public _uint = 0;\n    string public _string = \"string\";\n    bool public _bool = true;\n}","sourcePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","ast":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","exportedSymbols":{"States":[80]},"id":81,"nodeType":"SourceUnit","nodes":[{"id":70,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:2"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":80,"linearizedBaseContracts":[80],"name":"States","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":73,"name":"_uint","nodeType":"VariableDeclaration","scope":80,"src":"48:21:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":71,"name":"uint","nodeType":"ElementaryTypeName","src":"48:4:2","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"30","id":72,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"68:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":76,"name":"_string","nodeType":"VariableDeclaration","scope":80,"src":"75:32:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":74,"name":"string","nodeType":"ElementaryTypeName","src":"75:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e67","id":75,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"99:8:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_97fc46276c172633607a331542609db1e3da793fca183d594ed5a61803a10792","typeString":"literal_string \"string\""},"value":"string"},"visibility":"public"},{"constant":false,"id":79,"name":"_bool","nodeType":"VariableDeclaration","scope":80,"src":"113:24:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":77,"name":"bool","nodeType":"ElementaryTypeName","src":"113:4:2","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"74727565","id":78,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"133:4:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"},"visibility":"public"}],"scope":81,"src":"26:114:2"}],"src":"0:140:2"},"legacyAST":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","exportedSymbols":{"States":[80]},"id":81,"nodeType":"SourceUnit","nodes":[{"id":70,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:2"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":80,"linearizedBaseContracts":[80],"name":"States","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":73,"name":"_uint","nodeType":"VariableDeclaration","scope":80,"src":"48:21:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":71,"name":"uint","nodeType":"ElementaryTypeName","src":"48:4:2","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"30","id":72,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"68:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":76,"name":"_string","nodeType":"VariableDeclaration","scope":80,"src":"75:32:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":74,"name":"string","nodeType":"ElementaryTypeName","src":"75:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e67","id":75,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"99:8:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_97fc46276c172633607a331542609db1e3da793fca183d594ed5a61803a10792","typeString":"literal_string \"string\""},"value":"string"},"visibility":"public"},{"constant":false,"id":79,"name":"_bool","nodeType":"VariableDeclaration","scope":80,"src":"113:24:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":77,"name":"bool","nodeType":"ElementaryTypeName","src":"113:4:2","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"74727565","id":78,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"133:4:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"},"visibility":"public"}],"scope":81,"src":"26:114:2"}],"src":"0:140:2"},"compiler":{"name":"solc","version":"0.4.21+commit.dfe3193c.Emscripten.clang"},"networks":{"4447":{"events":{},"links":{},"address":"0x3d49d1ef2ade060a33c6e6aa213513a7ee9a6241","transactionHash":"0x5dd370031b22580356a4a6e861c80c22c36b4af277694c9035badf1b3ee0b3bd"}},"schemaVersion":"2.0.0","updatedAt":"2018-04-23T21:30:52.105Z"}
+module.exports = {"contractName":"States","abi":[{"constant":true,"inputs":[],"name":"_uint","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_string","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_bool","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_int","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"change","type":"string"}],"name":"setString","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}],"bytecode":"0x60606040526000805560006001556040805190810160405280600681526020017f737472696e67000000000000000000000000000000000000000000000000000081525060029080519060200190610058929190610084565b506001600360006101000a81548160ff021916908315150217905550341561007f57600080fd5b610129565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100c557805160ff19168380011785556100f3565b828001600101855582156100f3579182015b828111156100f25782518255916020019190600101906100d7565b5b5090506101009190610104565b5090565b61012691905b8082111561012257600081600090555060010161010a565b5090565b90565b610384806101386000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632543135b146100725780637fcaf6661461009b5780639b267f09146100f85780639e6ba9c214610186578063af45869e146101b3575b600080fd5b341561007d57600080fd5b6100856101dc565b6040518082815260200191505060405180910390f35b34156100a657600080fd5b6100f6600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506101e2565b005b341561010357600080fd5b61010b6101fc565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014b578082015181840152602081019050610130565b50505050905090810190601f1680156101785780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561019157600080fd5b61019961029a565b604051808215151515815260200191505060405180910390f35b34156101be57600080fd5b6101c66102ad565b6040518082815260200191505060405180910390f35b60015481565b80600290805190602001906101f89291906102b3565b5050565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102925780601f1061026757610100808354040283529160200191610292565b820191906000526020600020905b81548152906001019060200180831161027557829003601f168201915b505050505081565b600360009054906101000a900460ff1681565b60005481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102f457805160ff1916838001178555610322565b82800160010185558215610322579182015b82811115610321578251825591602001919060010190610306565b5b50905061032f9190610333565b5090565b61035591905b80821115610351576000816000905550600101610339565b5090565b905600a165627a7a72305820cee10d2bd8c20916bebc79b011909c99927a53564dcfae8f5670d6e54d9887020029","deployedBytecode":"0x60606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632543135b146100725780637fcaf6661461009b5780639b267f09146100f85780639e6ba9c214610186578063af45869e146101b3575b600080fd5b341561007d57600080fd5b6100856101dc565b6040518082815260200191505060405180910390f35b34156100a657600080fd5b6100f6600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506101e2565b005b341561010357600080fd5b61010b6101fc565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014b578082015181840152602081019050610130565b50505050905090810190601f1680156101785780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561019157600080fd5b61019961029a565b604051808215151515815260200191505060405180910390f35b34156101be57600080fd5b6101c66102ad565b6040518082815260200191505060405180910390f35b60015481565b80600290805190602001906101f89291906102b3565b5050565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102925780601f1061026757610100808354040283529160200191610292565b820191906000526020600020905b81548152906001019060200180831161027557829003601f168201915b505050505081565b600360009054906101000a900460ff1681565b60005481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102f457805160ff1916838001178555610322565b82800160010185558215610322579182015b82811115610321578251825591602001919060010190610306565b5b50905061032f9190610333565b5090565b61035591905b80821115610351576000816000905550600101610339565b5090565b905600a165627a7a72305820cee10d2bd8c20916bebc79b011909c99927a53564dcfae8f5670d6e54d9887020029","sourceMap":"26:345:2:-;;;66:1;48:19;;107:1;87:21;;229:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;287:4;267:24;;;;;;;;;;;;;;;;;;;;26:345;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"26:345:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;87:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;297:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;229:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;229:32:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;267:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;48:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;87:21;;;;:::o;297:72::-;356:6;348:7;:14;;;;;;;;;;;;:::i;:::-;;297:72;:::o;229:32::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;267:24::-;;;;;;;;;;;;;:::o;48:19::-;;;;:::o;26:345::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.20;\n\ncontract States {\n    int public _int = 0;\n    //8 ->256\n    uint public _uint = 0;\n    //8 ->256\n    //address\n    //bytes1..32\n    //enum\n    //array all types\n    //mapping all types\n    //struct\n    string public _string = \"string\";\n    bool public _bool = true;\n    function setString(string change) public {\n        _string=change;\n    }\n}","sourcePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","ast":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","exportedSymbols":{"States":[96]},"id":97,"nodeType":"SourceUnit","nodes":[{"id":73,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:2"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":96,"linearizedBaseContracts":[96],"name":"States","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":76,"name":"_int","nodeType":"VariableDeclaration","scope":96,"src":"48:19:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"},"typeName":{"id":74,"name":"int","nodeType":"ElementaryTypeName","src":"48:3:2","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"}},"value":{"argumentTypes":null,"hexValue":"30","id":75,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"66:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":79,"name":"_uint","nodeType":"VariableDeclaration","scope":96,"src":"87:21:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":77,"name":"uint","nodeType":"ElementaryTypeName","src":"87:4:2","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"30","id":78,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"107:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":82,"name":"_string","nodeType":"VariableDeclaration","scope":96,"src":"229:32:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":80,"name":"string","nodeType":"ElementaryTypeName","src":"229:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e67","id":81,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"253:8:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_97fc46276c172633607a331542609db1e3da793fca183d594ed5a61803a10792","typeString":"literal_string \"string\""},"value":"string"},"visibility":"public"},{"constant":false,"id":85,"name":"_bool","nodeType":"VariableDeclaration","scope":96,"src":"267:24:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":83,"name":"bool","nodeType":"ElementaryTypeName","src":"267:4:2","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"74727565","id":84,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"287:4:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"},"visibility":"public"},{"body":{"id":94,"nodeType":"Block","src":"338:31:2","statements":[{"expression":{"argumentTypes":null,"id":92,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"argumentTypes":null,"id":90,"name":"_string","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":82,"src":"348:7:2","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"argumentTypes":null,"id":91,"name":"change","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":87,"src":"356:6:2","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},"src":"348:14:2","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},"id":93,"nodeType":"ExpressionStatement","src":"348:14:2"}]},"documentation":null,"id":95,"implemented":true,"isConstructor":false,"isDeclaredConst":false,"modifiers":[],"name":"setString","nodeType":"FunctionDefinition","parameters":{"id":88,"nodeType":"ParameterList","parameters":[{"constant":false,"id":87,"name":"change","nodeType":"VariableDeclaration","scope":95,"src":"316:13:2","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"},"typeName":{"id":86,"name":"string","nodeType":"ElementaryTypeName","src":"316:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":null,"visibility":"internal"}],"src":"315:15:2"},"payable":false,"returnParameters":{"id":89,"nodeType":"ParameterList","parameters":[],"src":"338:0:2"},"scope":96,"src":"297:72:2","stateMutability":"nonpayable","superFunction":null,"visibility":"public"}],"scope":97,"src":"26:345:2"}],"src":"0:371:2"},"legacyAST":{"absolutePath":"/home/ubuntu/dev/contract-state-util/contracts/States.sol","exportedSymbols":{"States":[96]},"id":97,"nodeType":"SourceUnit","nodes":[{"id":73,"literals":["solidity","^","0.4",".20"],"nodeType":"PragmaDirective","src":"0:24:2"},{"baseContracts":[],"contractDependencies":[],"contractKind":"contract","documentation":null,"fullyImplemented":true,"id":96,"linearizedBaseContracts":[96],"name":"States","nodeType":"ContractDefinition","nodes":[{"constant":false,"id":76,"name":"_int","nodeType":"VariableDeclaration","scope":96,"src":"48:19:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"},"typeName":{"id":74,"name":"int","nodeType":"ElementaryTypeName","src":"48:3:2","typeDescriptions":{"typeIdentifier":"t_int256","typeString":"int256"}},"value":{"argumentTypes":null,"hexValue":"30","id":75,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"66:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":79,"name":"_uint","nodeType":"VariableDeclaration","scope":96,"src":"87:21:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"},"typeName":{"id":77,"name":"uint","nodeType":"ElementaryTypeName","src":"87:4:2","typeDescriptions":{"typeIdentifier":"t_uint256","typeString":"uint256"}},"value":{"argumentTypes":null,"hexValue":"30","id":78,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"107:1:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"id":82,"name":"_string","nodeType":"VariableDeclaration","scope":96,"src":"229:32:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"},"typeName":{"id":80,"name":"string","nodeType":"ElementaryTypeName","src":"229:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":{"argumentTypes":null,"hexValue":"737472696e67","id":81,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"253:8:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_stringliteral_97fc46276c172633607a331542609db1e3da793fca183d594ed5a61803a10792","typeString":"literal_string \"string\""},"value":"string"},"visibility":"public"},{"constant":false,"id":85,"name":"_bool","nodeType":"VariableDeclaration","scope":96,"src":"267:24:2","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":83,"name":"bool","nodeType":"ElementaryTypeName","src":"267:4:2","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"argumentTypes":null,"hexValue":"74727565","id":84,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"287:4:2","subdenomination":null,"typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"},"visibility":"public"},{"body":{"id":94,"nodeType":"Block","src":"338:31:2","statements":[{"expression":{"argumentTypes":null,"id":92,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"argumentTypes":null,"id":90,"name":"_string","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":82,"src":"348:7:2","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"argumentTypes":null,"id":91,"name":"change","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":87,"src":"356:6:2","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},"src":"348:14:2","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},"id":93,"nodeType":"ExpressionStatement","src":"348:14:2"}]},"documentation":null,"id":95,"implemented":true,"isConstructor":false,"isDeclaredConst":false,"modifiers":[],"name":"setString","nodeType":"FunctionDefinition","parameters":{"id":88,"nodeType":"ParameterList","parameters":[{"constant":false,"id":87,"name":"change","nodeType":"VariableDeclaration","scope":95,"src":"316:13:2","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"},"typeName":{"id":86,"name":"string","nodeType":"ElementaryTypeName","src":"316:6:2","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string storage pointer"}},"value":null,"visibility":"internal"}],"src":"315:15:2"},"payable":false,"returnParameters":{"id":89,"nodeType":"ParameterList","parameters":[],"src":"338:0:2"},"scope":96,"src":"297:72:2","stateMutability":"nonpayable","superFunction":null,"visibility":"public"}],"scope":97,"src":"26:345:2"}],"src":"0:371:2"},"compiler":{"name":"solc","version":"0.4.21+commit.dfe3193c.Emscripten.clang"},"networks":{"4447":{"events":{},"links":{},"address":"0x345ca3e014aaf5dca488057592ee47305d9b3e10","transactionHash":"0x754afd83d99e5534d02532edca537a73baa63dd668009dcbf13d9d2c995c50da"}},"schemaVersion":"2.0.0","updatedAt":"2018-04-24T14:06:03.979Z"}
 
 /***/ }),
 
@@ -406,7 +406,6 @@ var Wallet = exports.Wallet = function () {
 
       var stateNamesAndVals = [];
       var contractStates = [];
-
       Object.values(contracts).forEach(function (_contract) {
         Object.values(_contract.abi).forEach(function () {
           var _ref8 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee8(abi) {
@@ -422,6 +421,9 @@ var Wallet = exports.Wallet = function () {
 
                     _context8.prev = 1;
                     stateValue = _this2.contractFunc(_contract.contractName + '.' + abi.name)();
+                    // const b = await stateValue;
+                    // console.log('tryna log sv', b);
+
                     _context8.t0 = stateNamesAndVals;
                     _context8.t1 = abi.name;
                     _context8.t2 = abi.outputs[0].type;
@@ -448,9 +450,6 @@ var Wallet = exports.Wallet = function () {
                     console.log(_context8.t5);
 
                   case 16:
-                    return _context8.abrupt('return', stateNamesAndVals);
-
-                  case 17:
                   case 'end':
                     return _context8.stop();
                 }
@@ -461,13 +460,14 @@ var Wallet = exports.Wallet = function () {
           return function (_x5) {
             return _ref8.apply(this, arguments);
           };
-        }());
+        }()
+        // return stateNamesAndVals;
+        );
         contractStates.push(Object.create({
           contractName: _contract.contractName,
           state: stateNamesAndVals
         }));
         stateNamesAndVals = [];
-        return contractStates;
       });
 
       return contractStates;
@@ -491,6 +491,13 @@ Wallet.contractFunc = function (contractDotFunc) {
           switch (_context9.prev = _context9.next) {
             case 0:
               _contractDotFunc$spli = contractDotFunc.split('.'), _contractDotFunc$spli2 = _slicedToArray(_contractDotFunc$spli, 2), contractName = _contractDotFunc$spli2[0], funcName = _contractDotFunc$spli2[1];
+              // if (args){
+              //   const [Contract, cid] = await Promise.all([
+              //     Wallet.getContract(contractName)
+              //   ]);
+
+              // }
+
               _context9.next = 3;
               return Wallet.getContract(contractName);
 
@@ -76197,11 +76204,6 @@ module.exports = XMLHttpRequest;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _regenerator = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
-
-var _regenerator2 = _interopRequireDefault(_regenerator);
-
 var _jsxFileName = '/home/ubuntu/dev/contract-state-util/pages/SimpleTable.js';
 
 var _react = __webpack_require__("./node_modules/react/cjs/react.development.js");
@@ -76232,8 +76234,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   enterModule && enterModule(module);
 })();
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 var styles = function styles(theme) {
   return {
     root: {
@@ -76248,11 +76248,13 @@ var styles = function styles(theme) {
 var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
   var contractStates = _ref.contractStates,
       classes = _ref.classes;
+
+  console.debug('render ui');
   return _react2.default.createElement(
     'div',
     { className: classes.root, __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 32
       }
     },
     contractStates && contractStates.map(function (n) {
@@ -76261,7 +76263,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 35
           }
         },
         _react2.default.createElement(
@@ -76269,14 +76271,14 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 28
+              lineNumber: 36
             }
           },
           _react2.default.createElement(
             _Table2.default,
             { className: classes.table, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 29
+                lineNumber: 37
               }
             },
             _react2.default.createElement(
@@ -76284,14 +76286,14 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 30
+                  lineNumber: 38
                 }
               },
               _react2.default.createElement(
                 _materialUi.Typography,
                 { variant: 'title', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 31
+                    lineNumber: 39
                   }
                 },
                 n.contractName
@@ -76301,7 +76303,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 32
+                    lineNumber: 40
                   }
                 },
                 _react2.default.createElement(
@@ -76309,7 +76311,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 33
+                      lineNumber: 41
                     }
                   },
                   'Name'
@@ -76319,7 +76321,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 34
+                      lineNumber: 42
                     }
                   },
                   'Type'
@@ -76329,7 +76331,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 35
+                      lineNumber: 43
                     }
                   },
                   'Value'
@@ -76341,16 +76343,15 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 38
+                  lineNumber: 46
                 }
               },
               n.state.map(function (e) {
-                console.log('e.value ', e.value);
                 return _react2.default.createElement(
                   _Table.TableRow,
                   { key: e.name, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 42
+                      lineNumber: 48
                     }
                   },
                   _react2.default.createElement(
@@ -76358,7 +76359,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 43
+                        lineNumber: 49
                       }
                     },
                     e.name
@@ -76367,7 +76368,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                     _Table.TableCell,
                     { numeric: true, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 44
+                        lineNumber: 50
                       }
                     },
                     e.type
@@ -76376,7 +76377,7 @@ var SimpleTableUI = (0, _styles.withStyles)(styles)(function (_ref) {
                     _Table.TableCell,
                     { numeric: true, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 45
+                        lineNumber: 51
                       }
                     },
                     e.value.toString()
@@ -76395,57 +76396,73 @@ SimpleTableUI.propTypes = {
   classes: _propTypes2.default.object.isRequired
 };
 
+// function shallowEqual(objA, objB) {
+//   // console.log('entering hte shallow equal');
+//   if (objA === objB) {
+//     console.log(objA, objB);
+//     return true;
+//   }
+
+//   if (
+//     typeof objA !== 'object' ||
+//     objA === null ||
+//     typeof objB !== 'object' ||
+//     objB === null
+//   ) {
+//     console.log(
+//       typeof objA !== 'object',
+//       objA === null,
+//       typeof objB !== 'object',
+//       objB === null,
+//       objA,
+//       objB
+//     );
+//     return false;
+//   }
+
+//   const keysA = Object.keys(objA);
+//   const keysB = Object.keys(objB);
+
+//   if (keysA.length !== keysB.length) {
+//     console.log(keysA.length, keysB.length);
+//     return false;
+//   }
+
+//   // Test for A's keys different from B.
+//   const bHasOwnProperty = hasOwnProperty.bind(objB);
+//   for (let i = 0; i < keysA.length; i++) {
+//     if (!bHasOwnProperty(keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) {
+//       // console.log(
+//       //   'returning false i guess',
+//       //   bHasOwnProperty(keysA[i]),
+//       //   objA[keysA[i]],
+//       //   objB[keysA[i]]
+//       // );
+//       return false;
+//     }
+//   }
+//   console.log('returning true i guess');
+//   return true;
+// }
+
+// function shallowCompare(instance, nextProps) {
+//   return shallowEqual(instance, nextProps);
+// }
+
 var SimpleTable = (0, _recompose.compose)((0, _recompose.lifecycle)({
   componentWillReceiveProps: function componentWillReceiveProps() {
-    var _this = this;
+    var contractStates = this.props.contractStates;
 
-    return _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-      var contractState, test;
-      return _regenerator2.default.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _contracts.Wallet.getContractState();
-
-            case 2:
-              contractState = _context.sent;
-              _context.next = 5;
-              return _contracts.Wallet.contractFunc('States._string')();
-
-            case 5:
-              test = _context.sent;
-              _context.next = 8;
-              return _this.setState({
-                contractStates: contractState
-              });
-
-            case 8:
-              console.log('received props for table', _this.props);
-              console.log('test', test);
-
-              _context.next = 12;
-              return _this.forceUpdate();
-
-            case 12:
-            case 'end':
-              return _context.stop();
-          }
-        }
-      }, _callee, _this);
-    }))();
-  }
-}), (0, _recompose.mapProps)(function (_ref2) {
-  var contractStates = _ref2.contractStates;
-  return (
-    // console.log('mapping props', contractStates[0]);
-    {
-      // date: block ? moment(new Date(block.timestamp * 1000)).format('LL') : null,
-      // numCrcs: Web3.fromWei(log.args.value).toString(),
+    this.setState({
       contractStates: contractStates
-    }
-  );
+    });
+
+    this.forceUpdate();
+  }
 }))(SimpleTableUI);
+SimpleTable.propTypes = {
+  classes: _propTypes2.default.object.isRequired
+};
 
 var _default = SimpleTable;
 exports.default = _default;
@@ -76499,11 +76516,6 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _regenerator = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
-
-var _regenerator2 = _interopRequireDefault(_regenerator);
-
 var _jsxFileName = '/home/ubuntu/dev/contract-state-util/pages/index.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -76534,8 +76546,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   enterModule && enterModule(module);
 })();
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -76546,8 +76556,7 @@ var App = function (_Component) {
   _inherits(App, _Component);
 
   function App() {
-    var _ref,
-        _this2 = this;
+    var _ref;
 
     var _temp, _this, _ret;
 
@@ -76559,159 +76568,56 @@ var App = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       contractStates: null
-    }, _this.logStates = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-      var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, _ref3, c, s, i;
+    }, _this.updateBlockchainState = function () {
+      // const contractState = Wallet.getContractState();
+      // this.setState({});
+      console.debug('updating blockchain');
+      // const contractState = Wallet.getContractState();
+      // this.setState({
+      //   contractStates: contractState,
+      // });
 
-      return _regenerator2.default.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              console.log(_this.state.contractStates);
-              _iteratorNormalCompletion = true;
-              _didIteratorError = false;
-              _iteratorError = undefined;
-              _context.prev = 4;
-              _iterator = _this.state.contractStates[Symbol.iterator]();
+      clearTimeout(_this.updateTimeout);
 
-            case 6:
-              if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
-                _context.next = 26;
-                break;
-              }
+      _this.forceUpdate();
+      _this.updateTimeout = setTimeout(_this.updateBlockchainState, 3000);
 
-              _ref3 = _step.value;
-              c = _ref3.contractName, s = _ref3.state;
-
-              console.log('Contract Name: ', c);
-              i = 0;
-
-            case 11:
-              if (!(i < s.length)) {
-                _context.next = 22;
-                break;
-              }
-
-              _context.t0 = console;
-              _context.t1 = s[i].name;
-              _context.t2 = s[i].type;
-              _context.next = 17;
-              return s[i].value;
-
-            case 17:
-              _context.t3 = _context.sent;
-
-              _context.t0.log.call(_context.t0, 'Name:', _context.t1, '| Type:', _context.t2, '| Value:', _context.t3);
-
-            case 19:
-              i++;
-              _context.next = 11;
-              break;
-
-            case 22:
-              console.log('----');
-
-            case 23:
-              _iteratorNormalCompletion = true;
-              _context.next = 6;
-              break;
-
-            case 26:
-              _context.next = 32;
-              break;
-
-            case 28:
-              _context.prev = 28;
-              _context.t4 = _context['catch'](4);
-              _didIteratorError = true;
-              _iteratorError = _context.t4;
-
-            case 32:
-              _context.prev = 32;
-              _context.prev = 33;
-
-              if (!_iteratorNormalCompletion && _iterator.return) {
-                _iterator.return();
-              }
-
-            case 35:
-              _context.prev = 35;
-
-              if (!_didIteratorError) {
-                _context.next = 38;
-                break;
-              }
-
-              throw _iteratorError;
-
-            case 38:
-              return _context.finish(35);
-
-            case 39:
-              return _context.finish(32);
-
-            case 40:
-            case 'end':
-              return _context.stop();
-          }
-        }
-      }, _callee, _this2, [[4, 28, 32, 40], [33,, 35, 39]]);
-    })), _temp), _possibleConstructorReturn(_this, _ret);
+      console.debug('done updating blockchain');
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(App, [{
     key: 'componentWillMount',
-    value: function () {
-      var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
-        var contractState;
-        return _regenerator2.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.next = 2;
-                return _contracts.Wallet.getContractState();
+    value: function componentWillMount() {
+      var contractState = _contracts.Wallet.getContractState();
+      this.setState({
+        contractStates: contractState
+      });
+      this.updateBlockchainState();
+      console.debug('mounted');
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      console.debug('unmount');
+      clearTimeout(this.updateTimeout);
+    }
+    // componentDidUpdate() {
+    //   this.setState({
+    //     contractStates: Wallet.getContractState(),
+    //   });
+    //   // this.forceUpdate();
+    // }
 
-              case 2:
-                contractState = _context2.sent;
-                _context2.next = 5;
-                return this.setState({
-                  contractStates: contractState
-                });
-
-              case 5:
-                console.log('mounted', this.state.contractStates);
-                _context2.next = 8;
-                return this.forceUpdate();
-
-              case 8:
-              case 'end':
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this);
-      }));
-
-      function componentWillMount() {
-        return _ref4.apply(this, arguments);
-      }
-
-      return componentWillMount;
-    }()
   }, {
     key: 'render',
     value: function render() {
-      var contractStates = this.state.contractStates;
-      // if (this.state.contractStates) {
-      //    contractStates  = this.state.contractStates;
-      //   console.log(contractStates);
-      //   // this.logStates();
-      // }
-      // console.log('rendering', this.state.contractStates);
-
-      return contractStates && _react2.default.createElement(
+      console.log('in index render');
+      return _react2.default.createElement(
         'div',
         { className: 'App', __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 51
           }
         },
         _react2.default.createElement(
@@ -76719,21 +76625,21 @@ var App = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 50
+              lineNumber: 52
             }
           },
           _react2.default.createElement(
             'header',
             { className: 'App-header', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 51
+                lineNumber: 53
               }
             },
             _react2.default.createElement(
               'h1',
               { className: 'App-title', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 52
+                  lineNumber: 54
                 }
               },
               'Contract States'
@@ -76745,12 +76651,12 @@ var App = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 55
+              lineNumber: 57
             }
           },
-          contractStates && _react2.default.createElement(_SimpleTable2.default, { contractStates: contractStates, __source: {
+          _react2.default.createElement(_SimpleTable2.default, { contractStates: _contracts.Wallet.getContractState(), __source: {
               fileName: _jsxFileName,
-              lineNumber: 56
+              lineNumber: 58
             }
           })
         )

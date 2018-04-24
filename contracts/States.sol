@@ -13,4 +13,8 @@ contract States {
     //struct
     string public _string = "string";
     bool public _bool = true;
+
+    function setString(string change) public {
+        _string = change;
+    }
 }

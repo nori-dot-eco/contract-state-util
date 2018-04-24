@@ -44,6 +44,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-lumberjack": "^2.0.0",
     "recompose": "^0.27.0",
     "truffle": "^4.1.7",
     "truffle-contract": "^3.0.5",
