@@ -8,9 +8,10 @@
         }
       }
     ],
+    "next/babel",
     "stage-0"
   ],
-  "plugins": ["transform-class-properties"],
+  "plugins": ["transform-class-properties", "transform-decorators-legacy"],
   "env": {
     "production": {
       "presets": [
@@ -23,18 +24,34 @@
             "modules": false
           }
         ],
+        "next/babel",
         "stage-0"
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-decorators-legacy",
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "displayName": false
+          }
+        ]
       ]
     },
     "test": {
-      "plugins": ["transform-class-properties"],
+      "plugins": ["transform-class-properties", "transform-decorators-legacy"],
       "presets": [
         [
           "env",
           {
             "modules": "commonjs"
           }
-        ]
+        ],
+        "next/babel"
       ]
     },
     "server": {
