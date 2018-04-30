@@ -8,7 +8,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dashboard": "node bin/dashboard.js --port ${PORT:-3011}",
-    "dev": "yarn next",
+    "dev": "node bin/start.js",
     "build": "yarn next build",
     "start": "yarn next start",
     "lint": "lerna exec -- eslint ./"
@@ -48,7 +48,13 @@
     "recompose": "^0.27.0",
     "truffle": "^4.1.7",
     "truffle-contract": "^3.0.5",
-    "web3": "0.20.6"
+    "web3": "0.20.6",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.1",
+    "truffle-config": "^1.0.4",
+    "yargs": "^11.0.0"
   },
   "dependencies": {
     "babel": "^6.23.0",
