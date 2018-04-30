@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SimpleTable from './SimpleTable';
-import PropTypes from 'prop-types';
-import { Wallet, web3 } from '../lib/contracts';
+import { Wallet } from '../lib/contracts';
 
 class App extends Component {
   componentWillMount() {
