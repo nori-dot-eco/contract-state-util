@@ -49,11 +49,4 @@ contract States {
 ```
 
 #### Example Output:
-
-```
-Contract Name:  States
-Name: _uint | Type: uint256 | Value: BigNumber { s: 1, e: 0, c: [ 0 ] }
-Name: _string | Type: string | Value: string
-Name: _bool | Type: bool | Value: true
-----
-```
+![image](https://user-images.githubusercontent.com/18407013/39417480-52610a08-4c09-11e8-94f3-512066fef4da.png)
