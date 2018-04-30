@@ -35,13 +35,12 @@ contract States {
     function States() public {
         _mappingBoolToMapping[true][0] = 1;
     }
-    
 
     //enum
     // ???
 
     //array all types
-    // ???
+    uint[] public _uintArray = [100];
 
     //struct
     // ???
