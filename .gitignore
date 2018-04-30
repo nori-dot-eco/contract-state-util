@@ -63,3 +63,15 @@ typings/
 .env
 
 .DS_STORE
+
+
+.env
+.next/*
+es5
+coverage
+src/out
+keys.json
+sessions
+.datastore
+conf.local.json
+build

@@ -1,6 +1,16 @@
 # Ethereum Smart Contract State Utility
 
-This tool will parse all of your contracts for vairables, and out put their current state in the format of:
+---
+
+## Quickstart
+
+`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
+
+---
+
+### About
+
+This tool will parse all of your contracts for vairables, and output their current state on localhost:3000 in the format of:
 
 ```
 Contract Name: ContractName
@@ -10,6 +20,8 @@ Name: varName | Type: varType | Value: varValue
 Most of the logic is in `lib/contracts.js`.
 
 It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, arrays, or mappings`.
+
+---
 
 ## Install
 
@@ -25,9 +37,21 @@ In truffle's console:
 
 `deploy`
 
-Then get their state:
+#### Launch the state dashboard:
 
-`yarn babel-node index.js`
+note: pass in your truffle's config location using the following:
+
+```
+Options:
+  --version               Show version number                          [boolean]
+  -t, --truffleConfigLoc  truffle.js location                         [required]
+  --port                  port to launch state dashboard
+  -h, --help              Show help                                    [boolean]
+```
+
+I.E. :
+
+`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
 
 ## Examples
 
@@ -46,12 +70,21 @@ contract States {
 }
 ```
 
+Contract: MoreStates.sol
+
+```solidity
+pragma solidity ^0.4.20;
+
+contract MoreStates {
+    int public _int2 = 1;
+    uint public _uint2 = 1;
+    string public _string2 = "string2";
+    bool public _bool2 = false;
+}
+```
+
 #### Example Output:
 
-```
-Contract Name:  States
-Name: _uint | Type: uint256 | Value: BigNumber { s: 1, e: 0, c: [ 0 ] }
-Name: _string | Type: string | Value: string
-Name: _bool | Type: bool | Value: true
-----
-```
+via localhost:3010 :
+
+![image](https://user-images.githubusercontent.com/18407013/39418009-adf07a2c-4c0c-11e8-9a5d-7c120b3cf688.png)
