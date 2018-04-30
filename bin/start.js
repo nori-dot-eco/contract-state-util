@@ -5,6 +5,7 @@ const argv = require('yargs')
   .alias('t', 'truffleConfigLoc')
   .nargs('t', 1)
   .describe('t', 'truffle.js location')
+  .describe('port', 'port to launch state dashboard')
   .demandOption(['t'])
   .help('h')
   .alias('h', 'help').argv;
@@ -15,6 +16,6 @@ exec(
     if (error !== null) {
       console.log(`exec error: ${error}`);
     }
-    exec('yarn next');
+    exec(`yarn next --port ${argv.port || 3010}`);
   }
 );

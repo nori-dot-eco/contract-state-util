@@ -1,5 +1,15 @@
 # Ethereum Smart Contract State Utility
 
+---
+
+## Quickstart
+
+`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
+
+---
+
+### About
+
 This tool will parse all of your contracts for vairables, and output their current state on localhost:3000 in the format of:
 
 ```
@@ -10,6 +20,8 @@ Name: varName | Type: varType | Value: varValue
 Most of the logic is in `lib/contracts.js`.
 
 It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, arrays, or mappings`.
+
+---
 
 ## Install
 
@@ -29,7 +41,17 @@ In truffle's console:
 
 note: pass in your truffle's config location using the following:
 
-`yarn run dev --truffleConfigLoc=./truffle.js`
+```
+Options:
+  --version               Show version number                          [boolean]
+  -t, --truffleConfigLoc  truffle.js location                         [required]
+  --port                  port to launch state dashboard
+  -h, --help              Show help                                    [boolean]
+```
+
+I.E. :
+
+`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
 
 ## Examples
 
@@ -63,6 +85,6 @@ contract MoreStates {
 
 #### Example Output:
 
-via localhost:3000 :
+via localhost:3010 :
 
 ![image](https://user-images.githubusercontent.com/18407013/39417480-52610a08-4c09-11e8-94f3-512066fef4da.png)
