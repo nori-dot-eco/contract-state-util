@@ -5,10 +5,13 @@
   "author": "jaycenhorton",
   "license": "MIT",
   "private": true,
+  "bin": {
+    "start": "bin/start.js"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dashboard": "node bin/dashboard.js --port ${PORT:-3011}",
-    "dev": "yarn next",
+    "dev": "node bin/start.js",
     "build": "yarn next build",
     "start": "yarn next start",
     "lint": "lerna exec -- eslint ./"
@@ -51,7 +54,16 @@
     "web3": "0.20.6"
   },
   "dependencies": {
+    "abi-decoder": "^1.1.0",
     "babel": "^6.23.0",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "module": "^1.2.5",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.1",
+    "truffle-config": "^1.0.4",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "yargs": "^11.0.0"
   }
 }
