@@ -48,5 +48,19 @@ contract States {
 }
 ```
 
+Contract: MoreStates.sol
+
+```solidity
+pragma solidity ^0.4.20;
+
+contract MoreStates {
+    int public _int2 = 1;
+    uint public _uint2 = 1;
+    string public _string2 = "string2";
+    bool public _bool2 = false;
+}
+```
+
 #### Example Output:
+
 ![image](https://user-images.githubusercontent.com/18407013/39417480-52610a08-4c09-11e8-94f3-512066fef4da.png)
