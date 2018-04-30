@@ -19,7 +19,7 @@ Name: varName | Type: varType | Value: varValue
 
 Most of the logic is in `lib/contracts.js`.
 
-It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, or arrays`.
+It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums or structs`. `array` and `mapping` types are mocked until support is added to dynamically call via manual user request.
 
 ---
 
@@ -71,7 +71,7 @@ contract States {
     //uint8 ->256
     uint8 public _uint8 = 0;
     uint public _uint = 0;
-    
+
     //address
     address public _address = this;
 

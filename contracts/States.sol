@@ -32,18 +32,18 @@ contract States {
     mapping(bool => address) public _mappingBoolToAddr;
     mapping(bool => mapping(uint=>uint)) public _mappingBoolToMapping;
 
-    function States() public {
-        _mappingBoolToMapping[true][0] = 1;
-    }
+    //array all types
+    uint[] public _uintArray = [100];
 
     //enum
     // ???
 
-    //array all types
-    uint[] public _uintArray = [100];
-
     //struct
     // ???
+
+    function States() public {
+        _mappingBoolToMapping[true][0] = 1;
+    }
 
     function setString(string change) public {
         _string = change;
