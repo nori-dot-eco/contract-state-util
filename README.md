@@ -1,6 +1,6 @@
 # Ethereum Smart Contract State Utility
 
-This tool will parse all of your contracts for vairables, and out put their current state in the format of:
+This tool will parse all of your contracts for vairables, and output their current state on localhost:3000 in the format of:
 
 ```
 Contract Name: ContractName
@@ -62,5 +62,7 @@ contract MoreStates {
 ```
 
 #### Example Output:
+
+via localhost:3000 :
 
 ![image](https://user-images.githubusercontent.com/18407013/39417480-52610a08-4c09-11e8-94f3-512066fef4da.png)
