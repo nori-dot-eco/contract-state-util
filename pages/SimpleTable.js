@@ -33,6 +33,7 @@ const SimpleTableUI = ({ contractStates, classes }) => (
                 <TableRow>
                   <TableCell>State Name</TableCell>
                   <TableCell>Type</TableCell>
+                  <TableCell>Inputs</TableCell>
                   <TableCell>Value</TableCell>
                 </TableRow>
               </TableHead>
@@ -41,6 +42,7 @@ const SimpleTableUI = ({ contractStates, classes }) => (
                   <TableRow key={e.name}>
                     <TableCell>{e.name}</TableCell>
                     <TableCell>{e.type}</TableCell>
+                    <TableCell>{e.inputs}</TableCell>
                     <TableCell>{e.value.toString()}</TableCell>
                   </TableRow>
                 ))}
