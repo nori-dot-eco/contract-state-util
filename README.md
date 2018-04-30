@@ -19,7 +19,7 @@ Name: varName | Type: varType | Value: varValue
 
 Most of the logic is in `lib/contracts.js`.
 
-It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, arrays, or mappings`.
+It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums, structs, or arrays`.
 
 ---
 
@@ -63,10 +63,44 @@ Contract: States.sol
 pragma solidity ^0.4.20;
 
 contract States {
+
+    //int 8 ->256
+    int8 public _int8 = 0;
     int public _int = 0;
+
+    //uint8 ->256
+    uint8 public _uint8 = 0;
     uint public _uint = 0;
+    
+    //address
+    address public _address = this;
+
+    //bytes1..32
+    bytes public _bytes = "0x0";
+
+    //string
     string public _string = "string";
+
+    //bool
     bool public _bool = true;
+
+    //mapping all types
+    mapping(uint => uint) public _mappingUintToUint;
+    mapping(int => uint) public _mappingInttoUint;
+    mapping(bytes32 => uint) public _mappingBytes32ToUint;
+    mapping(address => uint) public _mappingAddressToUint;
+    mapping(bool => uint) public _mappingBoolToUint;
+    mapping(bool => bool) public _mappingBoolToBool;
+    mapping(bool => address) public _mappingBoolToAddr;
+    mapping(bool => mapping(uint=>uint)) public _mappingBoolToMapping;
+
+    function States() public {
+        _mappingBoolToMapping[true][0] = 1;
+    }
+
+    function setString(string change) public {
+        _string = change;
+    }
 }
 ```
 
@@ -80,6 +114,8 @@ contract MoreStates {
     uint public _uint2 = 1;
     string public _string2 = "string2";
     bool public _bool2 = false;
+    address public _address2 = this;
+    bytes public _bytes2 = "0x0";
 }
 ```
 
@@ -87,4 +123,4 @@ contract MoreStates {
 
 via localhost:3010 :
 
-![image](https://user-images.githubusercontent.com/18407013/39418009-adf07a2c-4c0c-11e8-9a5d-7c120b3cf688.png)
+![image](https://user-images.githubusercontent.com/18407013/39424588-396c9008-4c2c-11e8-8ffe-ab4e05f70c51.png)
