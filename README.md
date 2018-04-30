@@ -87,4 +87,4 @@ contract MoreStates {
 
 via localhost:3010 :
 
-![image](https://user-images.githubusercontent.com/18407013/39417480-52610a08-4c09-11e8-94f3-512066fef4da.png)
+![image](https://user-images.githubusercontent.com/18407013/39418009-adf07a2c-4c0c-11e8-9a5d-7c120b3cf688.png)
