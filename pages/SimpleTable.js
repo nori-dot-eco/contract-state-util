@@ -44,6 +44,13 @@ const SimpleTableUI = ({ contractStates, classes }) => (
                     <TableCell>{e.value.toString()}</TableCell>
                   </TableRow>
                 ))}
+                <TableRow>
+                  {' '}
+                  <TableCell>
+                    *** If value contains asterix, its value was mocked due to
+                    it being a complex type
+                  </TableCell>{' '}
+                </TableRow>
               </TableBody>
             </Table>
           </CardContent>
