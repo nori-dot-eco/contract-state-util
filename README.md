@@ -25,9 +25,11 @@ In truffle's console:
 
 `deploy`
 
-Then get their state:
+#### Launch the state dashboard:
 
-`yarn babel-node index.js`
+note: pass in your truffle's config location using the following:
+
+`yarn run dev --truffleConfigLoc=./truffle.js`
 
 ## Examples
 
