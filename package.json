@@ -7,7 +7,6 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "dashboard": "node bin/dashboard.js --port ${PORT:-3011}",
     "dev": "node bin/start.js",
     "build": "yarn next build",
     "start": "yarn next start",
