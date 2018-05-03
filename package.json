@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "dev": "node bin/start.js",
+    "dev": "node bin/contract-state-util.js",
     "build": "yarn next build",
     "start": "yarn next start",
     "lint": "lerna exec -- eslint ./"
