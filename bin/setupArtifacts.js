@@ -32,7 +32,7 @@ function createContractsFromArtifacts() {
         err => {
           if (err) {
             // append failed
-            console.log(err);
+            // console.log(err);
           } else {
             // done
           }

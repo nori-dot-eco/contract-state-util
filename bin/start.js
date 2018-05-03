@@ -14,7 +14,7 @@ exec(
   `node ./bin/setupArtifacts.js --truffleConfigLoc=${argv.truffleConfigLoc}`,
   error => {
     if (error !== null) {
-      console.log(`exec error: ${error}`);
+      // console.log(`exec error: ${error}`);
     }
     exec(`yarn next --port ${argv.port || 3010}`);
   }
