@@ -5,6 +5,15 @@
   "author": "jaycenhorton",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "ethereum",
+    "truffle",
+    "nori",
+    "smart contract",
+    "state",
+    "solidity",
+    "web3"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "node bin/start.js",
