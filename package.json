@@ -21,6 +21,9 @@
     "start": "yarn next start",
     "lint": "lerna exec -- eslint ./"
   },
+  "bin": {
+    "contract-state-util": "./bin/start.js"
+  },
   "engines": {
     "node": "9.1.0",
     "yarn": "1.5.1"
