@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "jaycenhorton",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "node bin/start.js",
