@@ -22,7 +22,7 @@
     "lint": "lerna exec -- eslint ./"
   },
   "bin": {
-    "contract-state-util": "../bin/contract-state-util.js"
+    "contract-state-util": "./bin/contract-state-util.js"
   },
   "engines": {
     "node": "9.1.0",
