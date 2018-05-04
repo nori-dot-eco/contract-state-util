@@ -8,11 +8,11 @@ class App extends Component {
   }
 
   updateBlockchainState = () => {
-    console.debug('updating blockchain');
+    console.debug('checking for updates from blockchain');
     clearTimeout(this.updateTimeout);
     this.forceUpdate();
-    this.updateTimeout = setTimeout(this.updateBlockchainState, 3000);
-    console.debug('done updating blockchain');
+    this.updateTimeout = setTimeout(this.updateBlockchainState, 12000);
+    console.debug('done checking for updates/updating from blockchain');
   };
 
   componentWillUnmount() {
@@ -21,10 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" style={{ width: '100%' }}>
+      <div style={{ minWidth: '100%' }}>
         <div>
-          <header className="App-header">
-            <h1 className="App-title">Contract States</h1>
+          <header>
+            <h1>Contract States</h1>
           </header>
         </div>
         <div>
