@@ -4,7 +4,11 @@
 
 ## Quickstart
 
-`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
+`npm install -g contract-state-util`
+
+Run anywhere, just pass the location of your truffle config file, and the port you want to use
+
+`contract-state-util -t ./truffle.js --port=3000`
 
 ---
 
@@ -14,7 +18,10 @@ This tool will parse all of your contracts for vairables, and output their curre
 
 ```
 Contract Name: ContractName
-Name: varName | Type: varType | Value: varValue
+Name: varName | Type: varType | Inputs: inputTypes | Value: varValue
+
+Base Contracts:
+Contract Name: ContractName
 ```
 
 Most of the logic is in `lib/contracts.js`.
@@ -25,7 +32,7 @@ It works by using a dynamic contract getter, `contractFunc` via `getContractStat
 
 ## Install
 
-`yarn install`
+`npm install -g contract-state-util`
 
 ## Run
 
