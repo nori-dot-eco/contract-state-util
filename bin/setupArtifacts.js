@@ -5,10 +5,10 @@ const fs = require('fs');
 const argv = require('yargs').argv;
 
 function createContractsFromArtifacts() {
-  if (path.resolve('./lib/artifacts.js')) {
-    fs.unlink(path.resolve('./lib/artifacts.js'));
+  if (path.resolve('lib/artifacts.js')) {
+    fs.unlink(path.resolve('lib/artifacts.js'));
   } else {
-    fs.write(path.resolve('./lib/artifacts.js'));
+    fs.write(path.resolve('lib/artifacts.js'));
   }
 
   const truffleConfig = argv.truffleConfigLoc
@@ -16,7 +16,7 @@ function createContractsFromArtifacts() {
     : config.load(path.resolve('./truffle.js'), {});
 
   const artifactsDir =
-    truffleConfig.contracts_build_directory || './build/contracts';
+    truffleConfig.contracts_build_directory || 'build/contracts';
 
   const contracts = {};
   const artifactNames = shell.ls(`${artifactsDir}/*.json`);
@@ -32,7 +32,7 @@ function createContractsFromArtifacts() {
         err => {
           if (err) {
             // append failed
-            // console.log(err);
+            console.log(err);
           } else {
             // done
           }

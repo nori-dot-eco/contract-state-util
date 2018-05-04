@@ -7,62 +7,90 @@ import Table, {
   TableHead,
   TableRow,
 } from 'material-ui/Table';
-import { Card, CardContent, Typography } from 'material-ui';
+import {
+  Card,
+  ExpansionPanel,
+  ExpansionPanelDetails,
+  ExpansionPanelSummary,
+  Typography,
+} from 'material-ui';
 import { compose, lifecycle } from 'recompose';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
-const styles = () => ({
-  root: {
-    width: '500px !important',
-  },
-  table: {
-    maxWidth: '400px',
-  },
-});
+const styles = {};
 
-const SimpleTableUI = ({ contractStates, classes }) => (
-  <div className={classes.table}>
-    {contractStates &&
-      contractStates.map(n => (
-        <Card className={classes.table}>
-          <CardContent>
-            <Table className={classes.table}>
-              <TableHead>
-                <Typography variant="title">
-                  Contract Name: {n.contractName}
-                </Typography>
-                <TableRow>
-                  <TableCell>State Name</TableCell>
-                  <TableCell>Type</TableCell>
-                  <TableCell>Inputs</TableCell>
-                  <TableCell>Value</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {n.state.map(e => (
-                  <TableRow key={e.name}>
-                    <TableCell>{e.name}</TableCell>
-                    <TableCell>{e.type}</TableCell>
-                    <TableCell>{e.inputs}</TableCell>
-                    <TableCell>{e.value.toString()}</TableCell>
+const SimpleTableUI = ({ contractStates, classes }) =>
+  contractStates && (
+    <Card>
+      {contractStates.map(n => (
+        <ExpansionPanel key={`${n.contractName}-contract-table`}>
+          <ExpansionPanelSummary
+            expandIcon={<ExpandMoreIcon color="primary" />}
+          >
+            <Typography variant="headline">
+              Contract Name: {`${n.contractName} ID: ${n.contractId}`}
+            </Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Table style={{ width: '100%' }}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell style={{ minWidth: '250px' }}>
+                      State Name
+                    </TableCell>
+                    <TableCell>Type</TableCell>
+                    <TableCell>Inputs</TableCell>
+                    <TableCell>Value</TableCell>
                   </TableRow>
+                </TableHead>
+                <TableBody>
+                  {n.state.map(e => (
+                    <TableRow key={`${JSON.stringify(e)}`}>
+                      <TableCell>{e.name}</TableCell>
+                      <TableCell>{e.type}</TableCell>
+                      <TableCell>{e.inputs}</TableCell>
+                      <TableCell>{e.value.toString()}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+              <Typography variant="title">Base Contracts:</Typography>
+
+              {n.baseContracts.baseContractsFromIds &&
+                n.baseContracts.baseContractsFromIds.map(b => (
+                  <Table>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell>
+                          <Typography variant="subheading">
+                            {`Contract Name: ${b.contractName}`}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
                 ))}
-                <TableRow>
-                  {' '}
-                  <TableCell>
-                    *** If value contains asterix, its value was mocked due to
-                    it being a complex type
-                  </TableCell>{' '}
-                </TableRow>
-              </TableBody>
+              <TableRow>
+                {' '}
+                <TableCell>
+                  *** If value contains asterix, its value was mocked due to it
+                  being a complex type
+                </TableCell>{' '}
+              </TableRow>
             </Table>
-          </CardContent>
-        </Card>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
       ))}
-  </div>
-);
+    </Card>
+  );
 
 SimpleTableUI.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
+  contractStates: PropTypes.array.isRequired,
+};
+SimpleTableUI.defaultProps = {
+  classes: {},
 };
 
 const SimpleTable = compose(
@@ -77,7 +105,10 @@ const SimpleTable = compose(
   withStyles(styles)
 )(SimpleTableUI);
 SimpleTable.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
+};
+SimpleTable.defaultProps = {
+  classes: {},
 };
 
 export default SimpleTable;
