@@ -58,7 +58,7 @@ Options:
 
 I.E. :
 
-`yarn run dev --truffleConfigLoc=./truffle.js --port=3000`
+`contract-state-util -t ./truffle.js --port=3000`
 
 ## Examples
 
@@ -128,6 +128,8 @@ contract MoreStates {
 
 #### Example Output:
 
-via localhost:3010 :
+`contract-state-util -t ./truffle.js --port=3047`
 
-![image](https://user-images.githubusercontent.com/18407013/39424588-396c9008-4c2c-11e8-8ffe-ab4e05f70c51.png)
+via http://localhost:3047/ :
+
+![image](https://user-images.githubusercontent.com/18407013/39646221-8e0b69fc-4f8f-11e8-8a7b-5338eaaa3dc0.png)
