@@ -28,7 +28,7 @@ const SimpleTableUI = ({ contractStates, classes }) =>
             expandIcon={<ExpandMoreIcon color="primary" />}
           >
             <Typography variant="headline">
-              Contract Name: {`${n.contractName} ID: ${n.contractId}`}
+              Contract Name: {`${n.contractName} (Node ID: ${n.contractId})`}
             </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -55,22 +55,29 @@ const SimpleTableUI = ({ contractStates, classes }) =>
                   ))}
                 </TableBody>
               </Table>
-              <Typography variant="title">Base Contracts:</Typography>
-
-              {n.baseContracts.baseContractsFromIds &&
-                n.baseContracts.baseContractsFromIds.map(b => (
-                  <Table>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell>
-                          <Typography variant="subheading">
-                            {`Contract Name: ${b.contractName}`}
-                          </Typography>
-                        </TableCell>
-                      </TableRow>
-                    </TableBody>
-                  </Table>
-                ))}
+              <ExpansionPanel key={`${n.contractName}-contract-table`}>
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon color="primary" />}
+                >
+                  <Typography variant="title">Base Contracts:</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  {n.baseContracts.baseContractsFromIds &&
+                    n.baseContracts.baseContractsFromIds.map(b => (
+                      <Table>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>
+                              <Typography variant="subheading">
+                                {`Contract Name: ${b.contractName}`}
+                              </Typography>
+                            </TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    ))}
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
               <TableRow>
                 {' '}
                 <TableCell>
