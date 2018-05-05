@@ -1,6 +1,6 @@
 {
   "name": "contract-state-util",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "preferGlobal": true,
   "author": "jaycenhorton",
   "license": "MIT",
@@ -14,6 +14,10 @@
     "solidity",
     "web3"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaycenhorton/contract-state-util"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "node bin/contract-state-util.js",

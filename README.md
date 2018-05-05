@@ -14,7 +14,7 @@ Run anywhere, just pass the location of your truffle config file, and the port y
 
 ### About
 
-This tool will parse all of your contracts for vairables, and output their current state on localhost:3000 in the format of:
+This tool will parse all of your contracts for variables, and output their current state on localhost:3000 in the format of:
 
 ```
 Contract Name: ContractName
