@@ -1,16 +1,5 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": "last 2 versions, > 5%"
-        }
-      }
-    ],
-    "next/babel",
-    "stage-0"
-  ],
+  "presets": ["@babel/preset-env", "@babel/react", "next/babel"],
   "plugins": ["transform-class-properties", "transform-decorators-legacy"],
   "env": {
     "production": {

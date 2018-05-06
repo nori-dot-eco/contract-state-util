@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+const shell = require('shelljs');
 const { exec } = require('child_process');
+
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
   .alias('t', 'truffleConfigLoc')
@@ -10,12 +12,26 @@ const argv = require('yargs')
   .help('h')
   .alias('h', 'help').argv;
 
+let utilDir = shell.which('contract-state-util').toString();
+
+utilDir = utilDir.replace(
+  'bin/contract-state-util',
+  'lib/node_modules/contract-state-util'
+);
 exec(
-  `node ./bin/setupArtifacts.js --truffleConfigLoc=${argv.truffleConfigLoc}`,
+  `node ${utilDir}/bin/setupArtifacts.js --truffleConfigLoc=${
+    argv.truffleConfigLoc
+  }`,
   error => {
     if (error !== null) {
-      // console.log(`exec error: ${error}`);
+      console.log(`exec error: ${error}`);
     }
-    exec(`yarn next --port ${argv.port || 3010}`);
+    exec(
+      `node ${utilDir}/node_modules/.bin/next --port ${argv.port || 3010}`,
+      { cwd: utilDir },
+      error2 => {
+        console.log(`exec error 2: ${error2}`);
+      }
+    );
   }
 );

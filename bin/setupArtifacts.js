@@ -5,10 +5,17 @@ const fs = require('fs');
 const argv = require('yargs').argv;
 
 function createContractsFromArtifacts() {
-  if (path.resolve('lib/artifacts.js')) {
-    fs.unlink(path.resolve('lib/artifacts.js'));
+  let utilDir = shell.which('contract-state-util').toString();
+
+  utilDir = utilDir.replace(
+    'bin/contract-state-util',
+    'lib/node_modules/contract-state-util/'
+  );
+
+  if (path.resolve(`${utilDir}lib/artifacts.js`)) {
+    fs.unlink(path.resolve(`${utilDir}lib/artifacts.js`));
   } else {
-    fs.write(path.resolve('lib/artifacts.js'));
+    fs.write(path.resolve(`${utilDir}lib/artifacts.js`));
   }
 
   const truffleConfig = argv.truffleConfigLoc
@@ -27,7 +34,7 @@ function createContractsFromArtifacts() {
 
     try {
       fs.appendFile(
-        path.resolve('./lib/artifacts.js'),
+        path.resolve(`${utilDir}lib/artifacts.js`),
         `export { default as ${contractName} } from '${name}';\n`,
         err => {
           if (err) {
