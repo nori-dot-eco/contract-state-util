@@ -10,7 +10,7 @@ CURRENTLY YOU ALSO NEED TO CLONE THIS PROJECT ANYWHERE ON YOUR MACHINE (current 
 
 cd to directory you clone to, then run
 
-`npm`
+`npm link`
 
 This will link the repo to your local npm and allows the UI to be run from the repos location whilst still allowing you to run the tool globally, at least until a workaround is found to allow webpack to spawn normally.
 
