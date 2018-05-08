@@ -6,12 +6,10 @@ const argv = require('yargs').argv;
 
 function createContractsFromArtifacts() {
   let utilDir = shell.which('contract-state-util').toString();
-
   utilDir = utilDir.replace(
     'bin/contract-state-util',
     'lib/node_modules/contract-state-util/'
   );
-
   if (path.resolve(`${utilDir}lib/artifacts.js`)) {
     fs.unlink(path.resolve(`${utilDir}lib/artifacts.js`));
   } else {

@@ -13,7 +13,6 @@ const argv = require('yargs')
   .alias('h', 'help').argv;
 
 let utilDir = shell.which('contract-state-util').toString();
-
 utilDir = utilDir.replace(
   'bin/contract-state-util',
   'lib/node_modules/contract-state-util'
@@ -26,12 +25,8 @@ exec(
     if (error !== null) {
       console.log(`exec error: ${error}`);
     }
-    exec(
-      `node ${utilDir}/node_modules/.bin/next --port ${argv.port || 3010}`,
-      { cwd: utilDir },
-      error2 => {
-        console.log(`exec error 2: ${error2}`);
-      }
-    );
   }
 );
+exec(`npm run dev -- -p ${argv.port || 3010}`, { cwd: utilDir }, error2 => {
+  console.log(`exec error 2: ${error2}`);
+});
