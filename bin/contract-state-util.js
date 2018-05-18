@@ -3,9 +3,10 @@ const shell = require('shelljs');
 const { exec } = require('child_process');
 const next = require('next');
 const { createServer } = require('http');
+const path = require('path');
 
 const dev = false;
-const app = next({ dev });
+const app = next({ dev, dir: path.resolve(__dirname, '..') });
 const handle = app.getRequestHandler();
 
 const argv = require('yargs')
