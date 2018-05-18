@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 const shell = require('shelljs');
 const { exec } = require('child_process');
+const next = require('next');
+const { createServer } = require('http');
+
+const dev = false;
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
@@ -27,6 +33,9 @@ exec(
     }
   }
 );
-exec(`npm run dev -- -p ${argv.port || 3010}`, { cwd: utilDir }, error2 => {
-  console.log(`exec error 2: ${error2}`);
+app.prepare().then(() => {
+  createServer(handle).listen(argv.port || 3000, err => {
+    if (err) throw err;
+    console.log('> Ready on http://localhost:3000');
+  });
 });

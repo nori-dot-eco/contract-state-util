@@ -1,10 +1,11 @@
 {
   "name": "contract-state-util",
-  "version": "1.0.38",
+  "version": "1.0.44",
   "main": "index.js",
   "author": "jaycenhorton",
   "license": "MIT",
   "private": false,
+  "files": ["*"],
   "keywords": [
     "ethereum",
     "truffle",
@@ -21,8 +22,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "next",
-    "build": "yarn next build",
-    "start": "yarn next start",
+    "build": "next build",
+    "start": "next start",
     "lint": "lerna exec -- eslint ./"
   },
   "bin": {
@@ -30,15 +31,14 @@
   },
   "engines": {
     "node": "9.1.0",
-    "yarn": "1.5.1"
+    "yarn": "1.6"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
     "truffle": "^4.1.7",
     "web3": "0.20.6"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/preset-react": "^7.0.0-beta.46",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "8",
@@ -63,10 +63,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "fs": "^0.0.1-security",
+    "http": "^0.0.0",
     "lerna": "^2.10.2",
     "material-ui": "1.0.0-beta.35",
     "material-ui-icons": "^1.0.0-beta.36",
-    "next": "^6.0.0",
+    "next": "^5.1.0",
     "path": "^0.12.7",
     "prettier": "^1.12.1",
     "prop-types": "^15.6.1",
