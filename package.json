@@ -5,7 +5,9 @@
   "author": "jaycenhorton",
   "license": "MIT",
   "private": false,
-  "files": ["*"],
+  "files": [
+    "*"
+  ],
   "keywords": [
     "ethereum",
     "truffle",
@@ -34,11 +36,14 @@
     "yarn": "1.6"
   },
   "devDependencies": {
+    "@material-ui/icons": "^1.0.0",
     "babel-plugin-styled-components": "^1.5.1",
     "truffle": "^4.1.7",
     "web3": "0.20.6"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.47",
+    "@material-ui/core": "^1.0.0",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "8",
@@ -51,7 +56,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
     "deep-filter-object": "^1.0.0",
@@ -65,8 +69,6 @@
     "fs": "^0.0.1-security",
     "http": "^0.0.0",
     "lerna": "^2.10.2",
-    "material-ui": "1.0.0-beta.35",
-    "material-ui-icons": "^1.0.0-beta.36",
     "next": "^5.1.0",
     "path": "^0.12.7",
     "prettier": "^1.12.1",

@@ -5,7 +5,7 @@ const next = require('next');
 const { createServer } = require('http');
 const path = require('path');
 
-const dev = false;
+const dev = true;
 const app = next({ dev, dir: path.resolve(__dirname, '..') });
 const handle = app.getRequestHandler();
 

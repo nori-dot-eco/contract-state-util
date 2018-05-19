@@ -1400,17 +1400,33 @@ var _propTypes = __webpack_require__("prop-types");
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styles = __webpack_require__("material-ui/styles");
+var _styles = __webpack_require__("@material-ui/core/styles");
 
-var _Table = __webpack_require__("material-ui/Table");
+var _Table = __webpack_require__("@material-ui/core/Table");
 
 var _Table2 = _interopRequireDefault(_Table);
 
-var _materialUi = __webpack_require__("material-ui");
+var _TableBody = __webpack_require__("@material-ui/core/TableBody");
+
+var _TableBody2 = _interopRequireDefault(_TableBody);
+
+var _TableCell = __webpack_require__("@material-ui/core/TableCell");
+
+var _TableCell2 = _interopRequireDefault(_TableCell);
+
+var _TableHead = __webpack_require__("@material-ui/core/TableHead");
+
+var _TableHead2 = _interopRequireDefault(_TableHead);
+
+var _TableRow = __webpack_require__("@material-ui/core/TableRow");
+
+var _TableRow2 = _interopRequireDefault(_TableRow);
+
+var _core = __webpack_require__("@material-ui/core");
 
 var _recompose = __webpack_require__("recompose");
 
-var _ExpandMore = __webpack_require__("material-ui-icons/ExpandMore");
+var _ExpandMore = __webpack_require__("@material-ui/icons/ExpandMore");
 
 var _ExpandMore2 = _interopRequireDefault(_ExpandMore);
 
@@ -1422,39 +1438,39 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
   var contractStates = _ref.contractStates,
       classes = _ref.classes;
   return contractStates && _react2.default.createElement(
-    _materialUi.Card,
+    _core.Card,
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 23
       }
     },
     contractStates.map(function (n) {
       return _react2.default.createElement(
-        _materialUi.ExpansionPanel,
+        _core.ExpansionPanel,
         { key: n.contractName + '-contract-table', __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 25
           }
         },
         _react2.default.createElement(
-          _materialUi.ExpansionPanelSummary,
+          _core.ExpansionPanelSummary,
           {
             expandIcon: _react2.default.createElement(_ExpandMore2.default, { color: 'primary', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 28
+                lineNumber: 27
               }
             }),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 27
+              lineNumber: 26
             }
           },
           _react2.default.createElement(
-            _materialUi.Typography,
+            _core.Typography,
             { variant: 'headline', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 30
+                lineNumber: 29
               }
             },
             'Contract Name: ',
@@ -1462,18 +1478,18 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
           )
         ),
         _react2.default.createElement(
-          _materialUi.ExpansionPanelDetails,
+          _core.ExpansionPanelDetails,
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 34
+              lineNumber: 33
             }
           },
           _react2.default.createElement(
             _Table2.default,
             { style: { width: '100%' }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 35
+                lineNumber: 34
               }
             },
             _react2.default.createElement(
@@ -1481,60 +1497,60 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 36
+                  lineNumber: 35
                 }
               },
               _react2.default.createElement(
-                _Table.TableHead,
+                _TableHead2.default,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 37
+                    lineNumber: 36
                   }
                 },
                 _react2.default.createElement(
-                  _Table.TableRow,
+                  _TableRow2.default,
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 38
+                      lineNumber: 37
                     }
                   },
                   _react2.default.createElement(
-                    _Table.TableCell,
+                    _TableCell2.default,
                     { style: { minWidth: '250px' }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 39
+                        lineNumber: 38
                       }
                     },
                     'State Name'
                   ),
                   _react2.default.createElement(
-                    _Table.TableCell,
+                    _TableCell2.default,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 41
+                      }
+                    },
+                    'Type'
+                  ),
+                  _react2.default.createElement(
+                    _TableCell2.default,
                     {
                       __source: {
                         fileName: _jsxFileName,
                         lineNumber: 42
                       }
                     },
-                    'Type'
+                    'Inputs'
                   ),
                   _react2.default.createElement(
-                    _Table.TableCell,
+                    _TableCell2.default,
                     {
                       __source: {
                         fileName: _jsxFileName,
                         lineNumber: 43
-                      }
-                    },
-                    'Inputs'
-                  ),
-                  _react2.default.createElement(
-                    _Table.TableCell,
-                    {
-                      __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 44
                       }
                     },
                     'Value'
@@ -1542,57 +1558,57 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
                 )
               ),
               _react2.default.createElement(
-                _Table.TableBody,
+                _TableBody2.default,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 47
+                    lineNumber: 46
                   }
                 },
                 n.state.map(function (e) {
                   return _react2.default.createElement(
-                    _Table.TableRow,
+                    _TableRow2.default,
                     { key: '' + JSON.stringify(e), __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 49
+                        lineNumber: 48
                       }
                     },
                     _react2.default.createElement(
-                      _Table.TableCell,
+                      _TableCell2.default,
+                      {
+                        __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 49
+                        }
+                      },
+                      e.name
+                    ),
+                    _react2.default.createElement(
+                      _TableCell2.default,
                       {
                         __source: {
                           fileName: _jsxFileName,
                           lineNumber: 50
                         }
                       },
-                      e.name
+                      e.type
                     ),
                     _react2.default.createElement(
-                      _Table.TableCell,
+                      _TableCell2.default,
                       {
                         __source: {
                           fileName: _jsxFileName,
                           lineNumber: 51
                         }
                       },
-                      e.type
+                      e.inputs
                     ),
                     _react2.default.createElement(
-                      _Table.TableCell,
+                      _TableCell2.default,
                       {
                         __source: {
                           fileName: _jsxFileName,
                           lineNumber: 52
-                        }
-                      },
-                      e.inputs
-                    ),
-                    _react2.default.createElement(
-                      _Table.TableCell,
-                      {
-                        __source: {
-                          fileName: _jsxFileName,
-                          lineNumber: 53
                         }
                       },
                       e.value.toString()
@@ -1602,41 +1618,41 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
               )
             ),
             _react2.default.createElement(
-              _materialUi.ExpansionPanel,
+              _core.ExpansionPanel,
               { key: n.contractName + '-contract-table', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 58
+                  lineNumber: 57
                 }
               },
               _react2.default.createElement(
-                _materialUi.ExpansionPanelSummary,
+                _core.ExpansionPanelSummary,
                 {
                   expandIcon: _react2.default.createElement(_ExpandMore2.default, { color: 'primary', __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 60
+                      lineNumber: 59
                     }
                   }),
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 59
+                    lineNumber: 58
                   }
                 },
                 _react2.default.createElement(
-                  _materialUi.Typography,
+                  _core.Typography,
                   { variant: 'title', __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 62
+                      lineNumber: 61
                     }
                   },
                   'Base Contracts:'
                 )
               ),
               _react2.default.createElement(
-                _materialUi.ExpansionPanelDetails,
+                _core.ExpansionPanelDetails,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 64
+                    lineNumber: 63
                   }
                 },
                 n.baseContracts.baseContractsFromIds && n.baseContracts.baseContractsFromIds.map(function (b) {
@@ -1645,38 +1661,38 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 67
+                        lineNumber: 66
                       }
                     },
                     _react2.default.createElement(
-                      _Table.TableBody,
+                      _TableBody2.default,
                       {
                         __source: {
                           fileName: _jsxFileName,
-                          lineNumber: 68
+                          lineNumber: 67
                         }
                       },
                       _react2.default.createElement(
-                        _Table.TableRow,
+                        _TableRow2.default,
                         {
                           __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 69
+                            lineNumber: 68
                           }
                         },
                         _react2.default.createElement(
-                          _Table.TableCell,
+                          _TableCell2.default,
                           {
                             __source: {
                               fileName: _jsxFileName,
-                              lineNumber: 70
+                              lineNumber: 69
                             }
                           },
                           _react2.default.createElement(
-                            _materialUi.Typography,
+                            _core.Typography,
                             { variant: 'subheading', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 71
+                                lineNumber: 70
                               }
                             },
                             'Contract Name: ' + b.contractName
@@ -1689,20 +1705,20 @@ var SimpleTableUI = function SimpleTableUI(_ref) {
               )
             ),
             _react2.default.createElement(
-              _Table.TableRow,
+              _TableRow2.default,
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 81
+                  lineNumber: 80
                 }
               },
               ' ',
               _react2.default.createElement(
-                _Table.TableCell,
+                _TableCell2.default,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 83
+                    lineNumber: 82
                   }
                 },
                 '*** If value contains asterix, its value was mocked due to it being a complex type'
@@ -1879,6 +1895,62 @@ module.exports = __webpack_require__("./pages/index.js");
 
 /***/ }),
 
+/***/ "@material-ui/core":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
+
+/***/ }),
+
+/***/ "@material-ui/core/Table":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Table");
+
+/***/ }),
+
+/***/ "@material-ui/core/TableBody":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/TableBody");
+
+/***/ }),
+
+/***/ "@material-ui/core/TableCell":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/TableCell");
+
+/***/ }),
+
+/***/ "@material-ui/core/TableHead":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/TableHead");
+
+/***/ }),
+
+/***/ "@material-ui/core/TableRow":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/TableRow");
+
+/***/ }),
+
+/***/ "@material-ui/core/styles":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/styles");
+
+/***/ }),
+
+/***/ "@material-ui/icons/ExpandMore":
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/ExpandMore");
+
+/***/ }),
+
 /***/ "babel-runtime/regenerator":
 /***/ (function(module, exports) {
 
@@ -1890,34 +1962,6 @@ module.exports = require("babel-runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("deep-filter-object");
-
-/***/ }),
-
-/***/ "material-ui":
-/***/ (function(module, exports) {
-
-module.exports = require("material-ui");
-
-/***/ }),
-
-/***/ "material-ui-icons/ExpandMore":
-/***/ (function(module, exports) {
-
-module.exports = require("material-ui-icons/ExpandMore");
-
-/***/ }),
-
-/***/ "material-ui/Table":
-/***/ (function(module, exports) {
-
-module.exports = require("material-ui/Table");
-
-/***/ }),
-
-/***/ "material-ui/styles":
-/***/ (function(module, exports) {
-
-module.exports = require("material-ui/styles");
 
 /***/ }),
 
