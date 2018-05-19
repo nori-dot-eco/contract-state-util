@@ -39,6 +39,6 @@ exec(
 app.prepare().then(() => {
   createServer(handle).listen(argv.port || 3000, err => {
     if (err) throw err;
-    console.log('> Ready on http://localhost:3000');
+    console.log(`> Ready on http://localhost:${argv.port || 3000}`);
   });
 });

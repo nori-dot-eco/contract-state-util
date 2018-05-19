@@ -6,15 +6,7 @@
 
 `npm install -g contract-state-util`
 
-CURRENTLY YOU ALSO NEED TO CLONE THIS PROJECT ANYWHERE ON YOUR MACHINE (current bug prevents this working without clone + npm link)
-
-cd to directory you clone to, then run
-
-`npm`
-
-This will link the repo to your local npm and allows the UI to be run from the repos location whilst still allowing you to run the tool globally, at least until a workaround is found to allow webpack to spawn normally.
-
-Run anywhere, just pass the location of your truffle config file, and the port you want to use
+Then, run the following anywhere just by passing the location of your truffle.js config file, and the port you want to use:
 
 `contract-state-util -t ./truffle.js --port=3000`
 
