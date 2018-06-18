@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Table, {
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from 'material-ui/Table';
+import { withStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
 import {
   Card,
   ExpansionPanel,
   ExpansionPanelDetails,
   ExpansionPanelSummary,
   Typography,
-} from 'material-ui';
+} from '@material-ui/core';
 import { compose, lifecycle } from 'recompose';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const styles = {};
 
@@ -69,7 +68,11 @@ const SimpleTableUI = ({ contractStates, classes }) =>
                           <TableRow>
                             <TableCell>
                               <Typography variant="subheading">
-                                {`Contract Name: ${b.contractName}`}
+                                {`Contract Name: ${
+                                  typeof b !== 'undefined'
+                                    ? b.contractName
+                                    : 'LOKUP FAILED'
+                                }`}
                               </Typography>
                             </TableCell>
                           </TableRow>

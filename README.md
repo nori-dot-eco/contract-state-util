@@ -1,60 +1,81 @@
 # Ethereum Smart Contract State Utility
 
----
-
 ## Quickstart
 
-`npm install -g contract-state-util`
+### If you experience issues with this package finding the correct contracts, clone the repo locally, and use `npm link`
 
-CURRENTLY YOU ALSO NEED TO CLONE THIS PROJECT ANYWHERE ON YOUR MACHINE (current bug prevents this working without clone + npm link)
+> npm install -g contract-state-util
 
-cd to directory you clone to, then run
+> contract-state-util -t ./truffle.js --port=3000
 
-`npm link`
-
-This will link the repo to your local npm and allows the UI to be run from the repos location whilst still allowing you to run the tool globally, at least until a workaround is found to allow webpack to spawn normally.
-
-Run anywhere, just pass the location of your truffle config file, and the port you want to use
-
-`contract-state-util -t ./truffle.js --port=3000`
+Run the above anywhere, just pass the location of your app's [truffle](http://truffleframework.com/).js config file
 
 ---
 
-### About
+## About
 
-This tool will parse all of your contracts for variables, and output their current state on localhost:3000 in the format of:
+This tool will parse all of your contracts for variables, and output their current state on localhost:3000 in the following format:
 
 ```
-Contract Name: ContractName
-Name: varName | Type: varType | Inputs: inputTypes | Value: varValue
+Contract States
+___________________________________________________________
+
+Contract Name: ExampleContractName (Node ID: 1234)
+
+State Name | Type    | Inputs                    | Value
+-----------------------------------------------------------
+varName    | varType | {index: {inName, inType}} | varValue
 
 Base Contracts:
-Contract Name: ContractName
+-----------------------------------------------------------
+Contract Name: ExampleBaseContractName
+
+___________________________________________________________
 ```
 
-Most of the logic is in `lib/contracts.js`.
+##### Note: Node ID above is taken from the contract's artifact.
 
-It works by using a dynamic contract getter, `contractFunc` via `getContractState()`, on all defined truffle artifacts and invoking `.call()` on each variable that is public. However, its current incarnation does not work on advanced types such as `enums or structs`. `array` and `mapping` types are mocked until support is added to dynamically call via manual user request.
+### How it works:
+
+First, [setup-artifacts.js](bin/setup-artifacts.js) grabs the artifacts from your `build/contracts` folder and creates a file called `lib/artifacts.js` which exports all of your artifacts for consumption by [contracts.js](lib/contracts.js).
+
+The [contracts.js](lib/contracts.js) magic works as follows:
+
+* imports all artifacts from the previous step's generated `lib/artifacts.js`
+* [truffle-contract's](https://github.com/trufflesuite/truffle-contract) `contract()` function is used to create a contract object for each artifact
+* When the dashboard is loaded it sets each contract object's provider as the current [web3](https://github.com/ethereum/web3.js/) provider
+* `getContractState()` invokes a dynamic contract getter function, `contractFunc`, on each contract leveraging `.call()` on each variable that is public. This is done by parsing the arifacts for variables and then invoking the call function on the contract object previously created.
+
+Note: the current incarnation does not work on advanced types such as `enums or structs`. Additionally, `array` and `mapping` types are mocked (a static index or key is passed in by default and only fetches that key/index). Support is needed to add dynamic calling or manual user calling.
 
 ---
 
 ## Install
 
-`npm install -g contract-state-util`
+> npm install -g contract-state-util
+
+---
 
 ## Run
 
-Deploy your contracts first:
+#### Prerequisites:
 
-`truffle develop`
+* A [MetaMask](https://metamask.io) enabled browser to use the web UI
+* A [Truffle](http://truffleframework.com/) application with some smart contracts
+
+### Deploy your contracts:
+
+> truffle develop
 
 In truffle's console:
 
-`deploy`
+> deploy
 
-#### Launch the state dashboard:
+### Launch the smart contract state inspector dashboard:
 
-note: pass in your truffle's config location using the following:
+From the command-line:
+
+> contract-state-util
 
 ```
 Options:
@@ -64,15 +85,15 @@ Options:
   -h, --help              Show help                                    [boolean]
 ```
 
-I.E. :
+#### For example:
 
-`contract-state-util -t ./truffle.js --port=3000`
+> contract-state-util -t ./truffle.js --port=3000
 
 ## Examples
 
 #### Example Input:
 
-Contract: States.sol
+Contract: [States.sol](contracts/States.sol)
 
 ```solidity
 pragma solidity ^0.4.20;
@@ -119,7 +140,7 @@ contract States {
 }
 ```
 
-Contract: MoreStates.sol
+Contract: [MoreStates.sol](contracts/MoreStates.sol)
 
 ```solidity
 pragma solidity ^0.4.20;
@@ -136,8 +157,10 @@ contract MoreStates {
 
 #### Example Output:
 
-`contract-state-util -t ./truffle.js --port=3047`
+Using:
 
-via http://localhost:3047/ :
+> contract-state-util -t ./truffle.js --port=3047
+
+Then navigate to http://localhost:3047/ to get output similar to the following:
 
 ![image](https://user-images.githubusercontent.com/18407013/39646221-8e0b69fc-4f8f-11e8-8a7b-5338eaaa3dc0.png)
