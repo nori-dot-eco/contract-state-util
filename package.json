@@ -1,11 +1,13 @@
 {
   "name": "contract-state-util",
-  "version": "1.0.53",
+  "version": "1.0.55",
   "main": "index.js",
   "author": "jaycenhorton",
   "license": "MIT",
   "private": false,
-  "files": ["*"],
+  "files": [
+    "*"
+  ],
   "keywords": [
     "ethereum",
     "truffle",
