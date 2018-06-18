@@ -5,11 +5,7 @@ const next = require('next');
 const { createServer } = require('http');
 const path = require('path');
 
-process.env.NODE_ENV = 'production';
-
-const dev = false;
-const app = next({ dev, dir: path.resolve(__dirname, '..') });
-const handle = app.getRequestHandler();
+// process.env.NODE_ENV = 'production';
 
 const argv = require('yargs')
   .usage('Usage: $0 [options]')
@@ -26,6 +22,11 @@ utilDir = utilDir.replace(
   'bin/contract-state-util',
   'lib/node_modules/contract-state-util'
 );
+exec(`npm build`, error => {
+  if (error !== null) {
+    console.log(`exec error: ${error}`);
+  }
+});
 exec(
   `node ${utilDir}/bin/setupArtifacts.js --truffleConfigLoc=${
     argv.truffleConfigLoc
@@ -36,9 +37,18 @@ exec(
     }
   }
 );
+
+const dev = true;
+const app = next({ dev, dir: path.resolve(__dirname, '..') });
+const handle = app.getRequestHandler();
 app.prepare().then(() => {
   createServer(handle).listen(argv.port || 3000, err => {
-    if (err) throw err;
-    console.log(`> Ready on http://localhost:${argv.port || 3000}`);
+    if (err) {
+      throw err;
+    }
+    console.log(
+      path.resolve(__dirname, '..'),
+      `> Ready on http://localhost:${argv.port || 3000}`
+    );
   });
 });

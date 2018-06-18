@@ -68,7 +68,11 @@ const SimpleTableUI = ({ contractStates, classes }) =>
                           <TableRow>
                             <TableCell>
                               <Typography variant="subheading">
-                                {`Contract Name: ${b.contractName}`}
+                                {`Contract Name: ${
+                                  typeof b !== 'undefined'
+                                    ? b.contractName
+                                    : 'LOKUP FAILED'
+                                }`}
                               </Typography>
                             </TableCell>
                           </TableRow>

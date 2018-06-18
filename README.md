@@ -2,6 +2,8 @@
 
 ## Quickstart
 
+### If you experience issues with this package finding the correct contracts, clone the repo locally, and use `npm link`
+
 > npm install -g contract-state-util
 
 > contract-state-util -t ./truffle.js --port=3000
