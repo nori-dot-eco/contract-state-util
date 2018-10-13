@@ -35,6 +35,7 @@ ___________________________________________________________
 
 ##### Note: Node ID above is taken from the contract's artifact.
 
+
 ### How it works:
 
 First, [setup-artifacts.js](bin/setup-artifacts.js) grabs the artifacts from your `build/contracts` folder and creates a file called `lib/artifacts.js` which exports all of your artifacts for consumption by [contracts.js](lib/contracts.js).
